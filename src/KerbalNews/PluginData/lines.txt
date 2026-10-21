@@ -1,0 +1,1510 @@
+# Kerbal News: what the anchor says. One line each: the event, a tab, the line's name (its sound file in Lines/), a tab, its
+# words as the voice is given them (ElevenLabs' delivery in square brackets; the caption leaves them out). Events: welcome,
+# pad, liftoff, staging, height, space, orbit, newworld, reentry, touchdown, splashdown, crash, eva, dock, flag, quiet, signoff,
+# and more; a quiet spell is filled by what fits the moment (warp, coast, night, rover, cruise; sunrise as the craft comes out
+# of the world's shadow) or by the studio's own (quiet, joke, fact, studio, mail, ad): see News.Spell.
+# The first ten are the owner's voice test of 2026-10-18 (Robert, the American broadcaster).
+welcome	welcome_01	[upbeat] Good evening, and welcome to Kerbal News Network. Tonight... we're going to space.
+pad	pad_01	Here we have a rocket, standing tall on the launch pad. Fuelled, ready, and... mostly in one piece.
+liftoff	liftoff_01	[excited] And there it goes! Lift-off! The engines are roaring and the crowd is on its feet!
+staging	staging_01	Stage separation confirmed. The first stage falls away... and the rocket climbs on.
+height	height_01	Our cameras show the craft passing ten thousand metres, and still climbing fast.
+orbit	orbit_01	[proudly] Ladies and gentlemen... we have orbit. Another triumph for the space programme.
+crash	crash_01	[gasps] Oh! That... that was not supposed to happen. [clears throat] We'll bring you more as soon as the smoke clears.
+touchdown	touchdown_01	Touchdown! A gentle landing, right on target. Well done, crew.
+eva	eva_01	And now a kerbal steps outside, floating free above the world. [warmly] What a view.
+signoff	signoff_01	That's all for tonight. Keep your eyes on the sky... and your parachutes packed. Good night.
+welcome	welcome_02	Good evening. This is Kerbal News Network, and we're coming to you live from the space centre.
+welcome	welcome_03	[upbeat] Welcome back to KNN, your first and only source for news from the launch pad and beyond.
+welcome	welcome_04	Good evening, Kerbin. Tonight's top story is still being written... by a rocket.
+welcome	welcome_05	You're watching Kerbal News Network. Stay tuned, because things are about to get very loud.
+welcome	welcome_06	Hello and welcome. I'm at the news desk, and our cameras are already rolling.
+welcome	welcome_07	[warmly] Good evening, everyone. Grab a snack and settle in. It's going to be quite a show.
+welcome	welcome_08	This is KNN, live. Our reporters are in position, our cameras are pointed at the sky, and I've had my coffee.
+welcome	welcome_09	Welcome to the evening bulletin. As always, we'll cover every launch, every landing, and every... unscheduled disassembly.
+welcome	welcome_10	Good evening. Tonight on Kerbal News: brave kerbals, big engines, and a great deal of fuel.
+welcome	welcome_11	[upbeat] We interrupt your regular programme to bring you live coverage from the space programme.
+welcome	welcome_12	Welcome to Kerbal News Network, where the news is always rising.
+welcome	welcome_13	Good evening. If you've just joined us, you're right on time.
+welcome	welcome_14	This is Kerbal News. Tonight we follow one craft, and the brave crew who built it... mostly by hand.
+welcome	welcome_15	Good evening and welcome. Mission control tells me everything is nominal. We'll see about that.
+welcome	welcome_16	You're tuned to KNN. Let's go live to the action.
+welcome	welcome_17	Good evening. Tonight we bring you the story of a crew, a craft, and a very ambitious plan.
+welcome	welcome_18	Welcome to the programme. Our engineers assure me this broadcast is perfectly safe. They said the same about the last rocket.
+welcome	welcome_19	Good evening from the KNN news desk. Let's see what's happening out there.
+welcome	welcome_20	This is Kerbal News Network, bringing you the sky, live, as it happens.
+welcome	welcome_21	Hello again, Kerbin. Another evening, another rocket, and another chance to make history.
+pad	pad_02	And here we have a rocket. A big one. Ready and waiting on the pad.
+pad	pad_03	Here we have our rocket, sitting quietly on the launch pad. It won't be quiet for long.
+pad	pad_04	What we have here, ladies and gentlemen, is a rocket. And a crew who very much intend to ride it.
+pad	pad_05	Here it is: the craft of the hour, standing proud on the pad.
+pad	pad_06	Here we have a rocket on the pad, fuelled and checked. Well... mostly checked.
+pad	pad_07	Our cameras are on the launch pad, where the rocket stands ready for the countdown.
+pad	pad_08	Here we have tonight's rocket. The engineers say it's their finest work yet. They always say that.
+pad	pad_09	There it is, on the pad. Tanks full, engines cold, crew strapped in.
+pad	pad_10	Here we have a rocket, and somewhere inside it, a very brave kerbal.
+pad	pad_11	The launch pad is clear, the tower is quiet, and the rocket is ready to go.
+pad	pad_12	Here we have the craft, gleaming in the light. Every bolt tightened... we're told.
+pad	pad_13	Take a good look, folks. Here we have a rocket that's about to leave the ground in a hurry.
+pad	pad_14	On the pad tonight, a fresh rocket, straight from the assembly building.
+pad	pad_15	Here we have a rocket. Tall, proud, and packed with enough fuel to light up the sky.
+pad	pad_16	The crew is aboard, the hatches are sealed, and the rocket waits for the word.
+pad	pad_17	[softly] And here we have it. The rocket. Waiting. Just waiting.
+pad	pad_18	Here we have a rocket on the launch pad, and a crowd that's been here since dawn.
+pad	pad_19	The countdown hasn't started yet, but you can feel it in the air. Here we have a rocket, ready to fly.
+pad	pad_20	Here we have our rocket, standing tall against the sky. Let's hope it stays that way until launch.
+pad	pad_21	Behind me, on the pad, the rocket of the evening. Everyone, please... keep your fingers crossed.
+liftoff	liftoff_02	[excited] Lift-off! We have lift-off!
+liftoff	liftoff_03	[excited] And we're off! The rocket clears the tower!
+liftoff	liftoff_04	There it goes! Fire and smoke and a whole lot of noise!
+liftoff	liftoff_05	[excited] Lift-off! Look at that thing climb!
+liftoff	liftoff_06	The engines are lit, the clamps are free... and up it goes!
+liftoff	liftoff_07	[excited] We have lift-off! A clean launch from the pad!
+liftoff	liftoff_08	And away it goes, riding a pillar of fire into the sky!
+liftoff	liftoff_09	[excited] Lift-off confirmed! The crowd is going absolutely wild!
+liftoff	liftoff_10	Up, up, and away! The rocket has left the pad!
+liftoff	liftoff_11	There's the ignition... and there's the lift-off! Beautiful!
+liftoff	liftoff_12	[excited] It's moving! It's really moving! Lift-off!
+liftoff	liftoff_13	And the rocket roars off the pad, shaking every window in the space centre.
+liftoff	liftoff_14	Lift-off! I can feel it in my chair, folks!
+liftoff	liftoff_15	[excited] Ignition, and lift-off! Godspeed, crew!
+liftoff	liftoff_16	There it goes, climbing steadily on a column of flame.
+liftoff	liftoff_17	We have lift-off, and the tower is clear. Nice and smooth.
+liftoff	liftoff_18	[excited] And it's away! Look at it go!
+liftoff	liftoff_19	Lift-off! That's the sound of a dream taking flight... and of a great deal of fuel burning.
+liftoff	liftoff_20	The rocket leaves the pad in a cloud of smoke. What a sight!
+liftoff	liftoff_21	[excited] Lift-off! Lift-off! I never get tired of saying that!
+liftoff	liftoff_22	And we're airborne! The launch is a success... so far.
+liftoff	liftoff_23	There's the lift-off, right on schedule! Well, close enough.
+liftoff	liftoff_24	Up it goes! The ground crew can breathe again.
+liftoff	liftoff_25	[excited] We have lift-off, and the rocket is climbing fast!
+staging	staging_02	Staging! The spent stage drops away behind it.
+staging	staging_03	And there goes the first stage, tumbling back towards the ground.
+staging	staging_04	Stage separation! A clean break, by the look of it.
+staging	staging_05	The empty stage falls away, and the next engines take over.
+staging	staging_06	There's the staging. One less stage, a lot less weight.
+staging	staging_07	Separation confirmed. The craft is lighter now, and climbing faster.
+staging	staging_08	[excited] Staging! Look at those pieces go!
+staging	staging_09	And that's another stage gone. Someone will have to clean that up.
+staging	staging_10	The booster separates and falls back to the sea. Its job is done.
+staging	staging_11	Stage separation, right on time. The crew must be pleased.
+staging	staging_12	And there it goes: the old stage, falling away into history.
+staging	staging_13	Staging confirmed. The next stage is lit and pushing hard.
+staging	staging_14	The spent tanks drop off. Don't worry, we have plenty more.
+staging	staging_15	Another stage separates. The rocket is getting smaller... and faster.
+staging	staging_16	There's the separation. Nicely done.
+staging	staging_17	And the lower stage falls away. Next stop: the upper atmosphere.
+staging	staging_18	Staging! I'm told that part was supposed to come off. Good.
+staging	staging_19	Clean separation. The upper stage is on its own now.
+staging	staging_20	And another stage drops away, glinting in the sunlight as it goes.
+height	height_02	Ten kilometres up and still climbing. The sky is getting darker by the second.
+height	height_03	The craft is passing ten thousand metres. The air up there is getting thin.
+height	height_04	Ten kilometres! Higher than any bird, and still going strong.
+height	height_05	Our trackers have it at ten kilometres and climbing. So far, so good.
+height	height_06	Altitude, ten kilometres. The crew must be feeling every bit of that push.
+height	height_07	Ten thousand metres. The clouds are below them now.
+height	height_08	Passing ten kilometres. The ground crew can only watch now.
+height	height_09	It's ten kilometres up, and it is not slowing down.
+height	height_10	Ten kilometres and counting. The view up there must be something.
+height	height_11	[impressed] Ten kilometres already! That rocket is in a hurry.
+height	height_12	The craft climbs through ten kilometres, leaving a long trail behind it.
+height	height_13	Ten kilometres high. From here it's just a bright dot in the sky.
+height	height_14	Our long lens shows the craft passing ten kilometres, engines still blazing.
+height	height_15	Ten thousand metres. Halfway to nowhere, and climbing.
+height	height_16	Ten kilometres, and the sky above them is turning a deeper blue.
+height	height_17	The rocket has passed ten kilometres. The hard part is just beginning.
+height	height_18	Ten kilometres up. I'd hold on to something, if I were them.
+height	height_19	We're tracking the craft at ten kilometres, right on its planned path.
+height	height_20	Ten kilometres! The crowd below can barely see it now.
+height	height_21	Up through ten kilometres. Everything's looking good from down here.
+space	space_01	[proudly] And they've done it: the craft has left the atmosphere. Welcome to space.
+space	space_02	No more air, no more weather. The crew is officially in space.
+space	space_03	They're out of the atmosphere! The sky up there is black as night.
+space	space_04	[excited] Space! The craft has crossed into space!
+space	space_05	The last wisps of air are behind them. That's space, folks.
+space	space_06	And with that, the crew leaves the atmosphere behind. What a moment.
+space	space_07	They're above the air now. Nothing but stars and silence up there.
+space	space_08	The craft has reached space. Every kerbal on the ground is cheering.
+space	space_09	Out of the atmosphere and into the black. Beautiful.
+space	space_10	[warmly] Space. They made it to space.
+space	space_11	The air is gone, and so is the drag. Smooth sailing from here, they say.
+space	space_12	The craft has left the sky behind. Next stop: the stars.
+space	space_13	Seventy kilometres and rising. Officially, that's space.
+space	space_14	They've reached space! I'd love to see the view from up there.
+space	space_15	Leaving the atmosphere now. Not bad for a vehicle built in a shed.
+space	space_16	[softly] Up there, the sky is black, and the planet below is very, very small.
+space	space_17	Space, at last. The crew is weightless... and probably grinning.
+space	space_18	And just like that, they're above it all. Space.
+space	space_19	The atmosphere gives way to the void. The crew is in space.
+space	space_20	They're out! Out of the air, out of the clouds, and into space!
+orbit	orbit_02	[proudly] We have orbit! The craft is circling the planet!
+orbit	orbit_03	Orbit achieved! The crew is now falling around the world, and missing it every time.
+orbit	orbit_04	[excited] They're in orbit! A stable orbit!
+orbit	orbit_05	And that's orbit. The engines can rest now.
+orbit	orbit_06	Confirmed: the craft is in orbit. A textbook flight.
+orbit	orbit_07	They made it! Orbit! The space centre is erupting in cheers!
+orbit	orbit_08	The craft has reached orbit, going sideways fast enough to never come down.
+orbit	orbit_09	[proudly] Orbit. That's what all this was for.
+orbit	orbit_10	In orbit, and in one piece. That's the best kind of orbit.
+orbit	orbit_11	Our trackers confirm a stable orbit. Congratulations to the whole team.
+orbit	orbit_12	And there it is: a full orbit around Kerbin. History, made again.
+orbit	orbit_13	The engines cut off, and the craft drifts into orbit. Peaceful.
+orbit	orbit_14	Orbit achieved! I may have shed a small tear, folks.
+orbit	orbit_15	They're up, they're around, and they're staying there. Orbit!
+orbit	orbit_16	A clean orbit. The engineers are shaking hands down at mission control.
+orbit	orbit_17	[excited] Orbit, orbit, orbit! Let's hear it for the crew!
+orbit	orbit_18	The craft is now in orbit, circling the world every half hour or so.
+orbit	orbit_19	Orbit confirmed. The crew can finally unclench.
+orbit	orbit_20	They've reached orbit, and the view must be incredible.
+orbit	orbit_21	Stable orbit. Mission control says the numbers look good.
+orbit	orbit_22	[warmly] And they're in orbit. Well done, everyone. Well done.
+orbit	orbit_23	That's orbit! From here, the whole system is within reach.
+orbit	orbit_24	In orbit at last. Somebody tell the crew they can take off their seatbelts.
+orbit	orbit_25	A perfect insertion into orbit. Couldn't have asked for better.
+orbit	orbit_26	The craft is in orbit, and the planet is turning slowly beneath it.
+newworld	newworld_01	The craft has crossed into the pull of a new world. A new chapter begins.
+newworld	newworld_02	[excited] They've left home behind! The craft is now in the grip of another world.
+newworld	newworld_03	A new world has them now. Our charts are being redrawn as we speak.
+newworld	newworld_04	The crew has entered a new sphere of influence. That's a fancy way of saying: they're really far away.
+newworld	newworld_05	They're no longer in Kerbin's pull. What a journey this has been.
+newworld	newworld_06	A new world fills the windows. The crew is on its way in.
+newworld	newworld_07	Mission control confirms: the craft has crossed into another world's reach.
+newworld	newworld_08	[proudly] They've made it all the way out here. A new world awaits.
+newworld	newworld_09	The old world falls behind, and a new one rises ahead.
+newworld	newworld_10	Crossing into a new gravity well. The crew must be thrilled... and a little nervous.
+newworld	newworld_11	Another world, another chapter in this remarkable flight.
+newworld	newworld_12	The craft has slipped into a new world's grasp. Let's see where this leads.
+newworld	newworld_13	They're here! Well... nearer here than anywhere else. A new world's pull has them now.
+newworld	newworld_14	A long way from home now. The craft has crossed into the reach of a new world.
+newworld	newworld_15	[softly] From up there, home is just a bright star behind them.
+newworld	newworld_16	Our map room is busy tonight. The craft has passed into a new world's influence.
+newworld	newworld_17	Into the unknown. A new world's gravity has taken hold of the craft.
+newworld	newworld_18	And the crew crosses over. Welcome to a whole new neighbourhood.
+newworld	newworld_19	The craft enters a new world's realm. We'll keep our cameras on it.
+newworld	newworld_20	There goes the border. The craft is now answering to a different world.
+reentry	reentry_01	The craft is coming home, and it's coming in hot. Re-entry has begun.
+reentry	reentry_02	[tense] Re-entry. This is the part where we all hold our breath.
+reentry	reentry_03	Look at that glow! The heat shield is earning its keep tonight.
+reentry	reentry_04	The craft hits the atmosphere at tremendous speed. Plasma all around it.
+reentry	reentry_05	Re-entry is under way. The crew is riding a fireball down.
+reentry	reentry_06	That's not a comet, folks. That's our crew, coming home.
+reentry	reentry_07	The heat shield is glowing bright orange. Hang in there, crew.
+reentry	reentry_08	Blazing through the upper atmosphere now. The next few minutes are critical.
+reentry	reentry_09	[tense] Communications may drop out during re-entry. Stay with us.
+reentry	reentry_10	A streak of fire across the sky. The craft is on its way down.
+reentry	reentry_11	The air is pushing back hard now. Everything rides on that heat shield.
+reentry	reentry_12	Re-entry! I hope somebody remembered to pack the heat shield.
+reentry	reentry_13	The capsule is wrapped in flame. It's the most beautiful thing I've seen all week.
+reentry	reentry_14	Slowing down fast, and burning bright. Classic re-entry.
+reentry	reentry_15	They're coming in like a meteor. Steady... steady...
+reentry	reentry_16	The fiery part of the trip home. The crew is feeling every bit of it.
+reentry	reentry_17	Re-entry under way. Our cameras can see the glow from the ground.
+reentry	reentry_18	Down through the thin air, faster than a bullet. What a ride.
+reentry	reentry_19	[softly] And here comes the hard part. Come on home, crew.
+reentry	reentry_20	The heat is building. The shield is holding. So far, so good.
+chutes	chutes_01	Parachutes! The chutes are out!
+chutes	chutes_02	[relieved] There they are, the parachutes, opening right on time.
+chutes	chutes_03	Chutes deployed. The craft is drifting down nice and slowly.
+chutes	chutes_04	And the parachutes bloom against the sky. Beautiful.
+chutes	chutes_05	Chutes open! The crew can relax a little now.
+chutes	chutes_06	There go the parachutes. Gentle as a falling leaf... a very heavy leaf.
+chutes	chutes_07	Parachutes deployed and fully open. A good sign.
+chutes	chutes_08	[relieved] The chutes are out. I can breathe again.
+chutes	chutes_09	Look at those parachutes. Bright, round, and doing their job.
+chutes	chutes_10	The parachutes catch the air, and the craft slows right down.
+chutes	chutes_11	Chutes open, descent stable. Nearly home.
+chutes	chutes_12	And there's the snap of the parachutes. Lovely.
+chutes	chutes_13	Parachutes deployed. Somebody packed those very nicely.
+chutes	chutes_14	The craft swings gently beneath its parachutes. Almost there.
+chutes	chutes_15	Chutes are good. Repeat, the chutes are good.
+touchdown	touchdown_02	[relieved] Touchdown! The craft is down, safe and sound.
+touchdown	touchdown_03	And they're down! A beautiful landing!
+touchdown	touchdown_04	Touchdown confirmed. Welcome home, crew.
+touchdown	touchdown_05	[excited] They've landed! They've actually landed!
+touchdown	touchdown_06	Wheels... well, legs... on the ground. A perfect touchdown.
+touchdown	touchdown_07	The craft settles onto the surface. Touchdown!
+touchdown	touchdown_08	Touchdown! A little bumpy, but we'll take it.
+touchdown	touchdown_09	They're down, and they're upright. That's a good landing in anyone's book.
+touchdown	touchdown_10	Landing confirmed. The crew is safe on the ground.
+touchdown	touchdown_11	[proudly] And a soft landing to finish the job. Bravo!
+touchdown	touchdown_12	Touchdown! Somebody get that pilot a medal.
+touchdown	touchdown_13	The craft touches down in a cloud of dust. Lovely work.
+touchdown	touchdown_14	And it's down. Gentle as you like.
+touchdown	touchdown_15	They've landed safely. Mission control is on its feet.
+touchdown	touchdown_16	Touchdown, right where they wanted it. Well, close enough.
+touchdown	touchdown_17	A soft landing, and not a single part left behind. Remarkable.
+touchdown	touchdown_18	[warmly] Down on the ground, safe and sound. What a flight.
+touchdown	touchdown_19	Touchdown. The engines are off, and the dust is settling.
+touchdown	touchdown_20	They're down! I've seen worse landings, and I've seen many.
+touchdown	touchdown_21	Landed! Let's hear it for the crew!
+splashdown	splashdown_01	[relieved] Splashdown! The capsule is in the water!
+splashdown	splashdown_02	And there's the splash! The crew is home, and a little wet.
+splashdown	splashdown_03	Splashdown confirmed. The recovery boats are on their way.
+splashdown	splashdown_04	A big splash and a gentle bob. Welcome home, crew.
+splashdown	splashdown_05	They're down in the sea! A textbook splashdown.
+splashdown	splashdown_06	Splashdown! I hope nobody gets seasick.
+splashdown	splashdown_07	The capsule hits the water and floats. Perfect.
+splashdown	splashdown_08	And down it comes into the ocean. Splashdown!
+splashdown	splashdown_09	Splashdown! The fish are going to have a story to tell.
+splashdown	splashdown_10	[warmly] Safe in the water. What a way to end a flight.
+splashdown	splashdown_11	The craft lands in the sea with a splash you can hear from shore.
+splashdown	splashdown_12	Splashdown, right on target. The ocean welcomes them home.
+splashdown	splashdown_13	They're floating! Splashdown is good!
+splashdown	splashdown_14	Into the water, safe and upright. Lovely.
+splashdown	splashdown_15	Splashdown! Somebody bring a towel.
+crash	crash_02	[gasps] Oh no! That... was not supposed to happen.
+crash	crash_03	[gasps] And there's an explosion! We're trying to find out what happened.
+crash	crash_04	Well. That didn't go to plan. [clears throat] Back to you in the studio. Oh... I am the studio.
+crash	crash_05	[shocked] That's... a lot of pieces. Our thoughts are with the engineers.
+crash	crash_06	A rapid unplanned disassembly, as the engineers like to call it.
+crash	crash_07	[gasps] Kaboom! Ladies and gentlemen, we appear to have lost some hardware.
+crash	crash_08	That was loud. That was very loud. Let's see what's left.
+crash	crash_09	[sighs] And that's why we build two of everything.
+crash	crash_10	Something has gone terribly wrong. Our cameras are still rolling.
+crash	crash_11	Oh dear. Oh dear, oh dear. That's going to need a new rocket.
+crash	crash_12	[gasps] A fireball! The craft has come apart!
+crash	crash_13	Well, the good news is, we now know where the weak point was.
+crash	crash_14	That's... not the landing they were hoping for.
+crash	crash_15	[stunned] I... I don't think that part was meant to come off like that.
+crash	crash_16	An explosion on our screens. We're waiting on word from mission control.
+crash	crash_17	Down it goes, in a shower of sparks. Not today, it seems.
+crash	crash_18	Well, the ground is still there. The craft... less so.
+crash	crash_19	[gasps] Look out! [pause] Okay. Okay. Everyone's... probably fine.
+crash	crash_20	We'll be reviewing that one in slow motion for weeks.
+crash	crash_21	That's what the engineers call a learning experience.
+crash	crash_22	A dramatic end to tonight's flight. The investigators are already on their way.
+crash	crash_23	[clears throat] Folks, we're experiencing some... technical difficulties.
+crash	crash_24	Debris everywhere. I'm told the insurance people are not amused.
+crash	crash_25	And it all comes apart. The crowd has gone very, very quiet.
+crash	crash_26	[gasps] Did you see that? I think everyone saw that.
+eva	eva_02	And a kerbal steps outside! Look at them float!
+eva	eva_03	The hatch is open, and out comes a very brave kerbal.
+eva	eva_04	[excited] A spacewalk! A kerbal is outside the craft!
+eva	eva_05	There they go, out into the open. Don't forget to hold on!
+eva	eva_06	A kerbal leaves the safety of the cabin. Nerves of steel.
+eva	eva_07	We have a kerbal outside! Smile for the cameras!
+eva	eva_08	Out they go. I'm told they're enjoying the view.
+eva	eva_09	[warmly] A kerbal outside, with the whole world below them. Incredible.
+eva	eva_10	The hatch swings open, and a crew member steps into the void.
+eva	eva_11	There's a kerbal on the outside! Somebody check they have their helmet on.
+eva	eva_12	Extra-vehicular activity, as the experts call it. A walk outside, as I call it.
+eva	eva_13	Out of the hatch and into the unknown. Brave, brave kerbal.
+eva	eva_14	A kerbal steps out for a look around. Can't blame them.
+eva	eva_15	Floating free beside the craft. What a moment for this crew.
+eva	eva_16	And there's the spacewalk. Every kerbal's dream.
+dock	dock_01	[excited] Docking confirmed! The two craft are joined!
+dock	dock_02	And they've docked! A beautiful bit of flying.
+dock	dock_03	Contact, and capture! The craft are locked together.
+dock	dock_04	Docking complete. Gentle as a handshake.
+dock	dock_05	Two ships become one. A perfect docking.
+dock	dock_06	They've docked! The pilots must have steady hands.
+dock	dock_07	A clean docking in orbit. Mission control is thrilled.
+dock	dock_08	And there's the click. Docked!
+dock	dock_09	Docking successful. That's harder than it looks, folks.
+dock	dock_10	[impressed] Lined up and locked on. What a docking.
+dock	dock_11	The two craft come together and hold. Lovely work.
+dock	dock_12	Docked! I've seen kerbals park a rover worse than that.
+dock	dock_13	And that's a hard dock. The crew can open the hatch.
+dock	dock_14	A perfect rendezvous ends in a perfect dock.
+dock	dock_15	They're joined! Two craft, one mission.
+flag	flag_01	A flag is planted! Another first for the history books.
+flag	flag_02	[proudly] And there it is: a flag, standing proud on new ground.
+flag	flag_03	The flag goes up. This place will remember that we were here.
+flag	flag_04	A flag on the surface! What a moment.
+flag	flag_05	They've planted a flag. Somebody take a picture!
+flag	flag_06	The flag is up, and it's a bit crooked, but it's ours.
+flag	flag_07	[warmly] A flag, a footprint, and a story to tell.
+flag	flag_08	Planting the flag. This is one for the family albums.
+flag	flag_09	There it stands, the flag, under an alien sky.
+flag	flag_10	And the flag is in the ground. Mission accomplished, I'd say.
+flag	flag_11	A small flag for a kerbal, a big flag for kerbal-kind.
+flag	flag_12	Flag planted! The crew salutes.
+flag	flag_13	The flag catches the light. What a sight.
+flag	flag_14	They're claiming this spot for science. And for snacks, probably.
+flag	flag_15	A new flag on a new world. It doesn't get better than this.
+quiet	quiet_01	A quiet moment up there. Let's take a breath with the crew.
+quiet	quiet_02	Things are calm for now. Our cameras are still on the craft.
+quiet	quiet_03	Nothing to report just yet. Which, in this business, is good news.
+quiet	quiet_04	While we wait, a reminder: always check your staging before you launch.
+quiet	quiet_05	All quiet on the flight. The crew is just doing their jobs.
+quiet	quiet_06	If you're just joining us, we're following tonight's flight live.
+quiet	quiet_07	Mission control reports everything is steady. For now.
+quiet	quiet_08	A peaceful stretch of the flight. Enjoy it while it lasts.
+quiet	quiet_09	[chuckles] I'm told the crew packed sandwiches. I hope they remembered the napkins.
+quiet	quiet_10	No news is good news, as they say around here.
+quiet	quiet_11	The craft cruises on. The crew is keeping busy.
+quiet	quiet_12	Our producers tell me the snack table in the control room is nearly empty. Big night.
+quiet	quiet_13	Steady as she goes. Our trackers have a good fix on the craft.
+quiet	quiet_14	Let's take a moment to thank the engineers who built this thing. Thank you, engineers.
+quiet	quiet_15	Somewhere up there, a kerbal is looking out of the window and smiling.
+quiet	quiet_16	It's a quiet stretch, folks. Perfect time to refill your drink.
+quiet	quiet_17	The flight continues smoothly. Let's keep it that way.
+quiet	quiet_18	Mission control is calm, the crew is calm, and I am... mostly calm.
+quiet	quiet_19	A gentle lull in tonight's coverage. Stay with us.
+quiet	quiet_20	I've covered many flights in my time. This one is going rather well.
+quiet	quiet_21	We're still live, still watching, still hoping for the best.
+quiet	quiet_22	The crew checks in with mission control. All systems are go.
+quiet	quiet_23	Fun fact: the first rocket from the space centre went sideways. We've come a long way.
+quiet	quiet_24	Things are quiet, but our cameras never blink.
+quiet	quiet_25	The flight goes on. We'll let you know the moment anything happens.
+quiet	quiet_26	[softly] It's peaceful up there. You can almost hear the stars.
+quiet	quiet_27	A calm moment. The crew is probably checking the fuel gauges. Again.
+quiet	quiet_28	Nothing new to report. The craft is right where it should be.
+quiet	quiet_29	Our analysts say the flight is going to plan. Our analysts are usually right.
+quiet	quiet_30	Hold tight, folks. These quiet moments never last long.
+signoff	signoff_02	That's all from the news desk tonight. Good night, and clear skies.
+signoff	signoff_03	We'll leave it there for now. This has been Kerbal News Network.
+signoff	signoff_04	That's the bulletin. Stay curious, and keep looking up.
+signoff	signoff_05	Thanks for watching KNN. Until next time, fly safe.
+signoff	signoff_06	And that's our coverage for now. Good night, Kerbin.
+signoff	signoff_07	This has been Kerbal News. Mind the staging, and good night.
+signoff	signoff_08	We're signing off. Thanks for flying with us tonight.
+signoff	signoff_09	That's it from me. Keep your fuel tanks full and your landings soft.
+signoff	signoff_10	Good night from all of us at Kerbal News Network.
+signoff	signoff_11	That wraps up tonight's coverage. See you at the next launch.
+signoff	signoff_12	And so we leave the crew to their journey. Good night.
+signoff	signoff_13	From the news desk, thank you, and good night.
+signoff	signoff_14	That's the news. Remember: what goes up must come down... gently, we hope.
+signoff	signoff_15	This is KNN, signing off. Clear skies, everyone.
+signoff	signoff_16	Until the next launch, this has been Kerbal News Network.
+landedaway	landedaway_01	[proudly] They've landed! On another world! Ladies and gentlemen, history!
+landedaway	landedaway_02	Touchdown on alien ground. The first footprints are only moments away.
+landedaway	landedaway_03	[excited] We have a landing, and it's not on Kerbin! Incredible!
+landedaway	landedaway_04	They're down, on a world no kerbal has ever called home. Until today.
+landedaway	landedaway_05	A landing on another world. I'll be telling my grandchildren about this.
+landedaway	landedaway_06	The dust settles on a strange new surface. They made it.
+landedaway	landedaway_07	Touchdown! Far from home, but safe and sound.
+landedaway	landedaway_08	[softly] Look at that horizon. That's not our sky up there.
+landedaway	landedaway_09	They've set down on another world. Mission control is in tears.
+landedaway	landedaway_10	Landed! The engineers said it couldn't be done. The engineers were wrong.
+landedaway	landedaway_11	A gentle landing on foreign soil. What a moment for the space programme.
+landedaway	landedaway_12	They're down! Somebody check the map, because this place isn't on it yet.
+landedaway	landedaway_13	Another world, another landing. These kerbals make it look easy.
+landedaway	landedaway_14	Down safely on a whole new world. Welcome, crew, to the history books.
+landedaway	landedaway_15	And they've landed so very far from home. Breathtaking.
+landedaway	landedaway_16	The legs touch down on alien rock. A perfect landing.
+landedaway	landedaway_17	[proudly] A landing on another world. Every kerbal on Kerbin is cheering tonight.
+landedaway	landedaway_18	They made it all the way here, and they landed in one piece. Remarkable.
+landedaway	landedaway_19	Touchdown, a long, long way from the launch pad.
+landedaway	landedaway_20	A new world has its first visitors. Welcome, crew.
+science	science_01	The crew has sent back new science. The labs are thrilled.
+science	science_02	Science! Fresh data is pouring in from the craft.
+science	science_03	The scientists at the space centre are very excited right now. New results are in.
+science	science_04	More data for the eggheads! Good work, crew.
+science	science_05	Experiment complete. The results are on their way home.
+science	science_06	New science from the flight. Someone fetch the professors.
+science	science_07	The research team just received the readings. They're smiling. I think.
+science	science_08	[chuckles] The science department sends its thanks, and asks for more.
+science	science_09	Another discovery for the archives. Well done.
+science	science_10	Fresh science, straight from the frontier.
+science	science_11	The crew is busy doing science. We don't know what it means, but it sounds important.
+science	science_12	New readings received. Our understanding of the universe just grew a little.
+science	science_13	The lab coats are cheering. That must be good science.
+science	science_14	Data in hand. This flight is paying for itself.
+science	science_15	More science! The research budget thanks you.
+recovered	recovered_01	The craft has been recovered. The crew is safe at home.
+recovered	recovered_02	Recovery complete. Welcome home, heroes.
+recovered	recovered_03	And that's the end of a successful mission. The craft is back with us.
+recovered	recovered_04	The recovery team has the crew. Hot drinks all round.
+recovered	recovered_05	Mission recovered. The engineers are already planning the next one.
+recovered	recovered_06	Safely recovered. Another flight for the record books.
+recovered	recovered_07	The crew is home, and the parts go back to the hangar. Lovely.
+recovered	recovered_08	Recovery confirmed. What a flight that was.
+recovered	recovered_09	They're back on solid ground and in good hands. Welcome home.
+recovered	recovered_10	The mission is over, and everyone came home. That's the best ending there is.
+recovered	recovered_11	Recovered, counted, and accounted for. Well done, everyone.
+recovered	recovered_12	The recovery crews have done their job. Time to celebrate.
+recovered	recovered_13	Back home at last. The space centre welcomes its crew.
+recovered	recovered_14	Mission complete. The crew can finally get some sleep.
+recovered	recovered_15	The craft is recovered, and the stories are just beginning.
+lowfuel	lowfuel_01	Mission control reports the fuel is running low. Every drop counts now.
+lowfuel	lowfuel_02	[tense] The fuel gauge is creeping towards empty. Careful up there.
+lowfuel	lowfuel_03	Low fuel. This is where good piloting makes all the difference.
+lowfuel	lowfuel_04	They're running out of fuel. Let's hope they planned for this.
+lowfuel	lowfuel_05	Fuel is getting low. The engineers are crossing their fingers.
+lowfuel	lowfuel_06	[tense] Not much fuel left. Not much at all.
+lowfuel	lowfuel_07	The tanks are nearly dry. Time to make every second count.
+lowfuel	lowfuel_08	Fuel warning! Somebody at mission control just dropped their coffee.
+lowfuel	lowfuel_09	Running on fumes now. Steady hands, crew.
+lowfuel	lowfuel_10	Low on fuel, high on hope. Come on, little rocket.
+lowfuel	lowfuel_11	The fuel situation is... let's call it 'tight'.
+lowfuel	lowfuel_12	Not a lot left in the tanks. I'd skip the sightseeing.
+lowfuel	lowfuel_13	The fuel is almost gone. This is going to be close.
+lowfuel	lowfuel_14	Fuel at critical levels. Our analysts are holding their breath.
+lowfuel	lowfuel_15	They're down to the last of the fuel. Make it count.
+quiet	quiet_31	We're still with the flight. Everything looks steady.
+quiet	quiet_32	A calm stretch. The crew is watching the instruments closely.
+quiet	quiet_33	I'm told the coffee at mission control is terrible tonight. Some things never change.
+quiet	quiet_34	The craft sails on through the quiet. Not a bad way to travel.
+quiet	quiet_35	Our cameras keep watch. So far, so good.
+quiet	quiet_36	If you're wondering, yes, we're still live. And yes, it's still going well.
+quiet	quiet_37	Quiet up there. Quiet down here. Let's enjoy it.
+quiet	quiet_38	The crew reports all is well. We'll take their word for it.
+quiet	quiet_39	A smooth flight so far. Let's all knock on wood.
+quiet	quiet_40	Not much happening at the moment, which is exactly how the engineers like it.
+quiet	quiet_41	Our tracking stations report a steady signal from the craft.
+quiet	quiet_42	While things are calm, a word for our sponsors: the brave folks who sweep the launch pad.
+quiet	quiet_43	The flight is going well. Let's not say that too loudly.
+quiet	quiet_44	[chuckles] Someone in the control room just asked if we're there yet.
+quiet	quiet_45	It's a peaceful moment on tonight's flight.
+quiet	quiet_46	The craft cruises along. Somewhere, a kerbal is humming a tune.
+quiet	quiet_47	Everything is steady. The crew is checking and double-checking.
+quiet	quiet_48	We're keeping our eyes on the craft for you. Stay tuned.
+quiet	quiet_49	A quiet spell. Perfect for the crew to admire the view.
+quiet	quiet_50	Nothing to report but good news. Long may it last.
+welcome	welcome_22	Good evening. You join us at an exciting moment for the space programme.
+welcome	welcome_23	This is Kerbal News Network, and tonight all eyes are on the sky.
+welcome	welcome_24	[upbeat] Hello, Kerbin! Pull up a chair. We're live.
+welcome	welcome_25	Good evening. I'm at the desk, the coffee's hot, and there's a rocket that needs watching.
+welcome	welcome_26	Welcome to KNN. Tonight's forecast: clear skies, with a strong chance of rockets.
+welcome	welcome_27	Good evening and welcome. Let's go straight to the action.
+welcome	welcome_28	From the KNN newsroom, good evening. We have a flight to follow.
+welcome	welcome_29	Welcome, everyone. Tonight we're bringing you every moment, as it happens.
+welcome	welcome_30	Good evening. Mission control has given us full access tonight. Let's not waste it.
+welcome	welcome_31	[warmly] Hello again, friends. It's good to have you with us.
+welcome	welcome_32	This is Kerbal News. We're live, we're on the air, and we're ready.
+welcome	welcome_33	Good evening. Tonight's story is one of courage, engineering, and very large fuel tanks.
+welcome	welcome_34	Welcome to tonight's broadcast. Our crew is in position.
+welcome	welcome_35	Good evening, Kerbin. Ready for another flight? We certainly are.
+welcome	welcome_36	You're watching KNN, the network that never takes its eyes off the sky.
+welcome	welcome_37	Hello and good evening. Tonight we have a front-row seat to history.
+welcome	welcome_38	[upbeat] Welcome back! The launch pad is busy, and so are we.
+welcome	welcome_39	Good evening. Let's see what our brave kerbals are up to tonight.
+welcome	welcome_40	This is Kerbal News Network. The countdown to tonight's story has already begun.
+welcome	welcome_41	Welcome, viewers. We have cameras everywhere tonight. Well... almost everywhere.
+liftoff	liftoff_26	[excited] And the rocket leaps off the pad! What power!
+liftoff	liftoff_27	Lift-off! The ground is shaking all the way over here at the studio!
+liftoff	liftoff_28	There's the launch! A perfect start to the flight!
+liftoff	liftoff_29	[excited] It's up! It's really up! Lift-off!
+liftoff	liftoff_30	And with a mighty roar, the rocket leaves Kerbin behind.
+liftoff	liftoff_31	Lift-off! Somewhere, an engineer is quietly celebrating.
+liftoff	liftoff_32	[excited] Go, go, go! Lift-off!
+liftoff	liftoff_33	The rocket climbs away from the pad on a tower of flame. Spectacular.
+liftoff	liftoff_34	Lift-off! The countdown's done, and the adventure begins!
+liftoff	liftoff_35	And it's away, right on time! Well done, ground crew!
+liftoff	liftoff_36	[excited] What a launch! Listen to that engine!
+liftoff	liftoff_37	The clamps let go, and up she goes!
+liftoff	liftoff_38	Lift-off at last! The crowd has been waiting all day for this.
+liftoff	liftoff_39	There's the launch! The tower is clear, and the sky is waiting.
+liftoff	liftoff_40	And we have lift-off! Fingers crossed for the next few minutes.
+liftoff	liftoff_41	[excited] Lift-off! That never gets old!
+liftoff	liftoff_42	The rocket rises slowly at first, then faster and faster. Beautiful launch.
+liftoff	liftoff_43	Lift-off! And not a single part fell off. Yet.
+liftoff	liftoff_44	Up it goes, straight and true. Lovely launch.
+liftoff	liftoff_45	[excited] Here we go! Lift-off!
+orbit	orbit_27	And they're in orbit. Somebody tell the accountants it worked.
+orbit	orbit_28	[excited] Orbit! What an achievement!
+orbit	orbit_29	Orbit confirmed. The crew is officially circling the world.
+orbit	orbit_30	They're up there now, going round and round. Orbit!
+orbit	orbit_31	In orbit! The hardest part of any flight is behind them.
+orbit	orbit_32	Orbital speed reached. They're not coming down unless they want to.
+orbit	orbit_33	[proudly] Orbit achieved, and the crew is safe. Magnificent.
+orbit	orbit_34	Round they go! A stable orbit, ladies and gentlemen.
+orbit	orbit_35	That's orbit. The engineers are doing a little dance in the control room.
+orbit	orbit_36	In orbit at last. From up there, sunrise comes every half an hour.
+orbit	orbit_37	A beautiful orbit. Now, where will they go next?
+orbit	orbit_38	They've made orbit! I knew they could do it. I said so. Didn't I say so?
+orbit	orbit_39	[warmly] Orbit. What a wonderful word.
+orbit	orbit_40	Orbit is confirmed by every tracking station. Congratulations, crew.
+orbit	orbit_41	They're in orbit, and the planet is putting on quite a show beneath them.
+crash	crash_27	[gasps] That's a hard landing. A very hard landing.
+crash	crash_28	Well, that's one way to come down. Not the recommended way.
+crash	crash_29	[shocked] The craft has hit the ground! We're awaiting news.
+crash	crash_30	Oh. Oh no. That's going to leave a mark.
+crash	crash_31	A crash! The rescue teams are on their way.
+crash	crash_32	[gasps] Down it goes! That did not look good.
+crash	crash_33	That's a lot of smoke. That's a lot of smoke.
+crash	crash_34	Folks, I'm told that was not part of the flight plan.
+crash	crash_35	[sighs] Back to the drawing board, I'm afraid.
+crash	crash_36	And the craft breaks apart. A sad moment for the programme.
+crash	crash_37	Well, the good news is that parts are cheap. The bad news is... everything else.
+crash	crash_38	[gasps] Impact! We'll bring you the details as soon as we have them.
+crash	crash_39	That landing was... let's call it 'enthusiastic'.
+crash	crash_40	Something has gone wrong, very wrong. Stay with us.
+crash	crash_41	There's going to be a lot of paperwork after that one.
+crash	crash_42	[shocked] Did it just... yes. Yes, it did. Oh dear.
+crash	crash_43	The craft has come down hard. Our thoughts are with the crew.
+crash	crash_44	An explosion! The engineers are going to want a word with somebody.
+crash	crash_45	And that, viewers, is why we test things.
+crash	crash_46	Down in flames. Not the ending anyone wanted tonight.
+touchdown	touchdown_22	Touchdown! Not bad, not bad at all.
+touchdown	touchdown_23	[relieved] They're down, and they're safe. That's what matters.
+touchdown	touchdown_24	A smooth touchdown. Somebody's been practising.
+touchdown	touchdown_25	The craft is on the ground and in one piece. Lovely.
+touchdown	touchdown_26	Touchdown! The landing legs held. Good legs.
+touchdown	touchdown_27	They've made it down. A round of applause for the pilot.
+touchdown	touchdown_28	Landed safely. Let's hear it for the crew!
+touchdown	touchdown_29	Touchdown, nice and gentle. Couldn't ask for better.
+touchdown	touchdown_30	And the craft settles to a stop. Welcome back to solid ground.
+touchdown	touchdown_31	[excited] They did it! A safe landing!
+touchdown	touchdown_32	Touchdown confirmed. The dust is still settling.
+touchdown	touchdown_33	Down safe. I may need to lie down myself after that.
+touchdown	touchdown_34	A safe and steady touchdown. Textbook stuff.
+touchdown	touchdown_35	Touchdown! The crew can finally stretch their legs.
+touchdown	touchdown_36	Landed! Another successful flight for the record.
+staging	staging_21	Stage separation! Lighter and faster now.
+staging	staging_22	There goes another stage. Thank you for your service.
+staging	staging_23	Staging complete. The flight continues.
+staging	staging_24	And the empty stage falls away behind them. Smooth.
+staging	staging_25	Separation! The next stage roars to life.
+staging	staging_26	One stage down, more to go.
+staging	staging_27	Clean staging. The engineers can relax for a moment.
+staging	staging_28	And there it goes, the spent stage, tumbling away.
+staging	staging_29	Staging confirmed. Everything looks good.
+staging	staging_30	The booster drops away. Onward and upward!
+staging	staging_31	Another stage gone. This rocket is shrinking fast.
+staging	staging_32	Separation is good. Next engine is firing.
+staging	staging_33	There's the staging, right on cue.
+staging	staging_34	The old stage is falling away. Its work is done.
+staging	staging_35	Staging! I love it when a plan comes together.
+quiet	quiet_51	The craft continues on its way. All looks well.
+quiet	quiet_52	It's quiet up there tonight. Peaceful, even.
+quiet	quiet_53	A moment of calm in tonight's flight.
+quiet	quiet_54	Mission control is watching closely. So are we.
+quiet	quiet_55	Our tracking shows the craft right on course.
+quiet	quiet_56	The crew is taking it easy for a moment. They've earned it.
+quiet	quiet_57	[chuckles] Mission control has ordered more snacks. That's a good sign.
+quiet	quiet_58	Steady progress. Nothing to worry about here.
+quiet	quiet_59	We're still live, and the flight is still going well.
+quiet	quiet_60	The sky is clear and the craft is steady.
+quiet	quiet_61	Quiet up there. The instruments are humming along.
+quiet	quiet_62	Nothing much to report. We'll keep watching.
+quiet	quiet_63	All systems normal, says mission control.
+quiet	quiet_64	The flight carries on, calm and steady.
+quiet	quiet_65	[softly] It's a beautiful night for a flight.
+quiet	quiet_66	Our engineers say everything is fine. They're smiling, too, which helps.
+quiet	quiet_67	Still with us? Good. So is the crew.
+quiet	quiet_68	The craft glides along. A lovely sight.
+quiet	quiet_69	A gentle moment. The crew is probably admiring the view.
+quiet	quiet_70	Everything is on track. Let's keep our fingers crossed.
+quiet	quiet_71	Tonight's flight is going smoothly. We like smooth.
+quiet	quiet_72	No surprises so far. Long may it continue.
+quiet	quiet_73	The crew sends their regards from up there. Probably.
+quiet	quiet_74	Calm skies, steady engines, happy crew.
+quiet	quiet_75	We'll stay with the flight. You stay with us.
+quiet	quiet_76	The control room is quiet. Everyone is focused.
+quiet	quiet_77	Still steady. Still on course. Still live.
+quiet	quiet_78	A good flight so far. Let's hope it stays that way.
+quiet	quiet_79	The kerbals are doing what kerbals do best: going places.
+quiet	quiet_80	Nothing new to report, and that's perfectly fine.
+pad	pad_22	Here we have a rocket. The engineers call it 'ambitious'. I call it 'large'.
+pad	pad_23	Here we have a rocket, and a crew who've been training for this day.
+pad	pad_24	On the launch pad, tonight's craft. Every bolt, every tank, ready for the sky.
+pad	pad_25	Here we have a rocket, steaming gently in the evening air.
+pad	pad_26	Look at it, folks. Here we have a rocket that's about to make history. Or noise. Probably both.
+pad	pad_27	Here we have a rocket, freshly rolled out from the hangar.
+pad	pad_28	The rocket stands on the pad, and the whole space centre holds its breath.
+pad	pad_29	Here we have our rocket, the tallest thing for miles around.
+pad	pad_30	On the pad, a rocket with a crew aboard and a long way to go.
+pad	pad_31	Here we have a rocket. Big tanks, big engines, big dreams.
+pad	pad_32	There she is, on the pad. Not much to look at now. Just wait.
+pad	pad_33	Here we have a rocket. Let's hope the paint is dry.
+pad	pad_34	Here we have tonight's flight, waiting patiently on the pad.
+pad	pad_35	The rocket is on the pad, and the crew is ready. Are you?
+pad	pad_36	Here we have a rocket, built by kerbals, for kerbals, to go very fast.
+pad	pad_37	Here we have a rocket. The countdown is close.
+pad	pad_38	A rocket on the pad and a crowd behind the fence. This is what we live for.
+pad	pad_39	Here we have a rocket, and a launch pad that's about to get very hot.
+pad	pad_40	Here it is, on the pad. Shiny, tall, and slightly wobbly.
+pad	pad_41	Here we have a rocket. Let's hope it goes up and not sideways.
+height	height_22	Ten kilometres and rising. Below them, the clouds look like cotton.
+height	height_23	Passing ten thousand metres. That's higher than our studio. By a lot.
+height	height_24	Ten kilometres. The air is thin and cold up there.
+height	height_25	We have the craft at ten kilometres, climbing steadily.
+height	height_26	Ten kilometres up! The ground looks like a map from there.
+height	height_27	The rocket passes ten kilometres, right on schedule.
+height	height_28	Ten kilometres and still going strong.
+height	height_29	At ten thousand metres now. Next stop, the edge of space.
+height	height_30	Ten kilometres. You can almost see the curve of the world from there.
+height	height_31	Through ten kilometres. The engines are working hard.
+height	height_32	Ten kilometres high, and the sky is darkening fast.
+height	height_33	Ten kilometres! That's a long way up for a kerbal.
+height	height_34	The craft has passed ten kilometres. Excellent progress.
+height	height_35	Ten kilometres above the ground, and accelerating.
+height	height_36	We're tracking it at ten kilometres. A clean climb so far.
+space	space_21	And just like that, they're in space. The sky above them is pitch black.
+space	space_22	Space! The crew can see the stars in broad daylight now.
+space	space_23	They've reached space. That's a sentence I'll never get tired of.
+space	space_24	Out of the atmosphere! No more air resistance, just pure speed.
+space	space_25	The craft has left the air behind. Welcome to the black.
+space	space_26	Space, at last. The crew will remember this moment forever.
+space	space_27	They're in space now, high above the clouds and the weather.
+space	space_28	Above the atmosphere. From here, Kerbin looks like a marble.
+space	space_29	[excited] Space! They made it to space!
+space	space_30	The air is gone, the sky is black, and the view is incredible.
+space	space_31	Out of the atmosphere, and into the history books.
+space	space_32	They've crossed the line into space. Every kerbal's dream.
+space	space_33	Space. It's big, it's dark, and it's all theirs tonight.
+space	space_34	Up and out of the air. The crew is weightless and probably very happy.
+space	space_35	They're in space, and the planet's edge glows blue beneath them.
+newworld	newworld_21	The craft is now under the pull of a new world. Exciting times.
+newworld	newworld_22	A new world takes hold of the craft. The adventure continues.
+newworld	newworld_23	They've crossed into a new world's influence. A long, long way from home.
+newworld	newworld_24	Another world's gravity has them now. Steady hands, crew.
+newworld	newworld_25	Welcome to new territory. The craft has a new master now.
+newworld	newworld_26	The crew has arrived in the neighbourhood of another world.
+newworld	newworld_27	They're in a new world's reach. What will they find there?
+newworld	newworld_28	A new world fills the sky ahead of the crew.
+newworld	newworld_29	The craft slips into another world's embrace. Lovely.
+newworld	newworld_30	Further than ever before. A new world has them now.
+newworld	newworld_31	A new sphere of influence. Our charts are getting busy tonight.
+newworld	newworld_32	They've reached another world's doorstep. Knock, knock.
+newworld	newworld_33	Into a new world's pull. The crew must be glued to the windows.
+newworld	newworld_34	The craft enters a new world's realm. History in the making.
+newworld	newworld_35	A new world, a new chapter. Stay with us.
+reentry	reentry_21	Re-entry! The craft is glowing like a shooting star.
+reentry	reentry_22	Here comes the heat. The shield is taking a beating.
+reentry	reentry_23	Coming in fast and hot. This is the dangerous part.
+reentry	reentry_24	[tense] Plasma all around them. Hold on, crew.
+reentry	reentry_25	The atmosphere grabs the craft and slows it with fire.
+reentry	reentry_26	A blazing re-entry. What a sight from the ground.
+reentry	reentry_27	Re-entry is under way. All we can do now is wait.
+reentry	reentry_28	The capsule is wrapped in a glowing trail. Hang on tight.
+reentry	reentry_29	Burning through the upper air. The heat shield is doing its job.
+reentry	reentry_30	[tense] Signal is fading in the plasma. This is normal. Probably.
+reentry	reentry_31	Fire outside, calm inside. We hope.
+reentry	reentry_32	Here they come, streaking across the sky.
+reentry	reentry_33	Re-entry heat is climbing. Every degree counts now.
+reentry	reentry_34	A long streak of fire across the evening sky. Our crew is coming home.
+reentry	reentry_35	Slowing down the hard way: with fire. Classic.
+chutes	chutes_16	The parachutes are open! A gentle ride down from here.
+chutes	chutes_17	Chutes out and holding. Lovely sight.
+chutes	chutes_18	[relieved] Parachutes! Thank goodness.
+chutes	chutes_19	The parachutes blossom open. The crew can relax.
+chutes	chutes_20	Chutes deployed. Slow and steady now.
+chutes	chutes_21	There go the parachutes, right on time.
+chutes	chutes_22	The craft hangs under its parachutes, drifting home.
+chutes	chutes_23	Parachutes are good. The descent is under control.
+chutes	chutes_24	Chutes open! Somebody give the parachute folder a raise.
+chutes	chutes_25	The parachutes catch the wind. Almost home.
+splashdown	splashdown_16	Splashdown! A perfect landing in the sea.
+splashdown	splashdown_17	Into the water with a mighty splash. They're home.
+splashdown	splashdown_18	Splashdown confirmed. The boats are racing out.
+splashdown	splashdown_19	[relieved] Splashdown! Safe and floating.
+splashdown	splashdown_20	They've hit the water. A beautiful splashdown.
+splashdown	splashdown_21	Splashdown! The crew is bobbing on the waves.
+splashdown	splashdown_22	A gentle splashdown, right on target.
+splashdown	splashdown_23	Splash! The ocean welcomes them home.
+splashdown	splashdown_24	The capsule is in the water and upright. Excellent.
+splashdown	splashdown_25	Splashdown. What a way to end a flight.
+eva	eva_17	A kerbal is going outside! Brave soul.
+eva	eva_18	The hatch opens, and out floats a crew member.
+eva	eva_19	[excited] A spacewalk is under way!
+eva	eva_20	Out they go! Mind the step. Oh, wait, there are no steps.
+eva	eva_21	A kerbal outside the craft. What a view they must have.
+eva	eva_22	There's a kerbal outside. Wave to the cameras!
+eva	eva_23	The crew member climbs out for a look around.
+eva	eva_24	A spacewalk! The most daring job in the programme.
+eva	eva_25	Outside the craft now. Careful, careful.
+eva	eva_26	And there's a kerbal, floating free. Magnificent.
+eva	eva_27	The hatch is open, and a kerbal is out exploring.
+eva	eva_28	A brave kerbal steps out into the unknown.
+eva	eva_29	Out they go for a walk. It's a long way down.
+eva	eva_30	[warmly] A kerbal outside, with nothing but stars around them.
+eva	eva_31	The crew member is outside. Everyone in mission control is holding their breath.
+dock	dock_16	Docked! Precision flying at its finest.
+dock	dock_17	The two craft lock together. Beautiful work.
+dock	dock_18	Docking successful! The crews can shake hands.
+dock	dock_19	Contact! And a solid dock.
+dock	dock_20	[impressed] What a docking. Steady as a rock.
+dock	dock_21	The craft come together gently. Docked.
+dock	dock_22	Docking confirmed. Mission control is applauding.
+dock	dock_23	Two craft, now one. Lovely docking.
+dock	dock_24	And they're docked. That takes skill.
+dock	dock_25	A perfect dock. The engineers are beaming.
+flag	flag_16	A flag is planted! Another world claimed for kerbal-kind.
+flag	flag_17	Up goes the flag. A proud moment.
+flag	flag_18	The flag stands tall on new ground.
+flag	flag_19	Planting the flag! Somebody get a picture.
+flag	flag_20	[proudly] There's our flag, flying where no flag has flown.
+flag	flag_21	A flag on the surface. History, made.
+flag	flag_22	The crew plants a flag and steps back to admire it.
+flag	flag_23	The flag is up. It's a little crooked. It's perfect.
+flag	flag_24	Flag planted! The folks back home will be thrilled.
+flag	flag_25	A brand new flag on a brand new world.
+landedaway	landedaway_21	Another world beneath their feet. They've landed!
+landedaway	landedaway_22	Touchdown, a world away from home. Incredible.
+landedaway	landedaway_23	[excited] They've landed on another world!
+landedaway	landedaway_24	A safe landing on alien ground. What a moment.
+landedaway	landedaway_25	Down safely on a strange new world.
+landedaway	landedaway_26	They're on the surface of another world. Unbelievable.
+landedaway	landedaway_27	A landing far from home. The crew has made history.
+landedaway	landedaway_28	Touchdown on another world! The space centre is going wild.
+landedaway	landedaway_29	They've landed. Somewhere very, very far from here.
+landedaway	landedaway_30	[proudly] A new world, and our crew is standing on it.
+landedaway	landedaway_31	The craft settles onto alien soil. Safe and sound.
+landedaway	landedaway_32	Landed! On another world! I need a moment.
+landedaway	landedaway_33	Touchdown on foreign ground. Spectacular flying.
+landedaway	landedaway_34	They're down, on a world that's never seen a kerbal before.
+landedaway	landedaway_35	Another world, another landing. Remarkable crew.
+science	science_16	Science! New results are coming in.
+science	science_17	The scientists are thrilled. New data from the flight.
+science	science_18	More science, fresh from the field.
+science	science_19	New research data received. Excellent work.
+science	science_20	The labs are buzzing tonight. New science has arrived.
+science	science_21	The crew has done some science. We're very proud.
+science	science_22	Fresh data from the craft. The professors are delighted.
+science	science_23	Science received. Our understanding grows a little more.
+science	science_24	New findings from tonight's flight. Fascinating stuff, apparently.
+science	science_25	The research team says 'thank you'. And 'more, please'.
+lowfuel	lowfuel_16	Fuel is getting very low. This could be tight.
+lowfuel	lowfuel_17	[tense] Running low on fuel. Every second counts.
+lowfuel	lowfuel_18	The fuel gauge is in the red. Careful now.
+lowfuel	lowfuel_19	Not much fuel left in the tanks.
+lowfuel	lowfuel_20	Low fuel warning. Let's hope they've done their sums.
+lowfuel	lowfuel_21	The tanks are almost empty. Fingers crossed.
+lowfuel	lowfuel_22	Fuel is running out. This is where skill comes in.
+lowfuel	lowfuel_23	Just a little fuel left. Use it wisely, crew.
+lowfuel	lowfuel_24	The fuel is almost gone. Tense moments here.
+lowfuel	lowfuel_25	Low on fuel. Mission control is very quiet now.
+signoff	signoff_17	That's all for now from Kerbal News. Clear skies, everyone.
+signoff	signoff_18	We'll leave the crew to it. Good night from KNN.
+signoff	signoff_19	That's the bulletin. Fly safe, and good night.
+signoff	signoff_20	And that wraps it up. See you at the next launch.
+signoff	signoff_21	Good night from the news desk. Keep looking up.
+signoff	signoff_22	We're off the air for now. Thanks for watching.
+signoff	signoff_23	That's all from me tonight. Good luck to the crew.
+signoff	signoff_24	This has been Kerbal News Network. Good night, Kerbin.
+signoff	signoff_25	Time to sign off. Clear skies and soft landings.
+signoff	signoff_26	From all of us at KNN, good night.
+supersonic	supersonic_01	[excited] They've broken the sound barrier! Did you hear that boom?
+supersonic	supersonic_02	Mach one! The craft is outrunning its own noise.
+supersonic	supersonic_03	Supersonic! The windows at the space centre are rattling.
+supersonic	supersonic_04	Faster than sound! What a machine.
+supersonic	supersonic_05	And there's the sound barrier, left far behind.
+supersonic	supersonic_06	Mach one and climbing. Hold on to your hats.
+supersonic	supersonic_07	[excited] Supersonic! I felt that boom in my teeth.
+supersonic	supersonic_08	They've gone supersonic. The air is screaming past now.
+supersonic	supersonic_09	Faster than the speed of sound. Not bad for a weekend project.
+supersonic	supersonic_10	Through the sound barrier! Smooth as you like.
+supersonic	supersonic_11	There's the sonic boom! Sorry, neighbours.
+supersonic	supersonic_12	Mach one! The shock waves are dancing off the hull.
+supersonic	supersonic_13	Supersonic flight. The crew must be feeling every bump.
+supersonic	supersonic_14	The craft punches through the sound barrier. Magnificent.
+supersonic	supersonic_15	They're moving faster than sound itself. Incredible.
+supersonic	supersonic_16	Mach one, confirmed. The engines are roaring.
+supersonic	supersonic_17	And that, viewers, was the sound barrier. Gone.
+supersonic	supersonic_18	Faster than sound, and still accelerating.
+supersonic	supersonic_19	[excited] Boom! Supersonic!
+supersonic	supersonic_20	The craft has gone supersonic. The sky is being torn open.
+runway	runway_01	Here we have a plane, waiting at the end of the runway.
+runway	runway_02	On the runway tonight: a sleek machine, ready to fly.
+runway	runway_03	Here we have an aircraft, engines warm, pilot ready.
+runway	runway_04	The plane sits on the runway. The control tower has cleared it.
+runway	runway_05	Here we have a plane. The wings look... mostly symmetrical.
+runway	runway_06	On the runway, a craft with wings. Let's see if they work.
+runway	runway_07	Here we have an aircraft, lined up and ready for take-off.
+runway	runway_08	The runway is clear, and the plane is ready to roll.
+runway	runway_09	Here we have a plane, built for speed and, hopefully, for landing.
+runway	runway_10	A beautiful aircraft on the runway tonight.
+runway	runway_11	Here we have a plane. The pilot is giving us a thumbs up. I think.
+runway	runway_12	On the runway, waiting for the word. Here we have a plane.
+runway	runway_13	The engines are spooling up. Here we have a plane, ready to go.
+runway	runway_14	Here we have an aircraft that our engineers are very proud of.
+runway	runway_15	The plane waits on the runway, gleaming in the light.
+takeoff	takeoff_01	[excited] And it's rolling! Faster, faster... and airborne!
+takeoff	takeoff_02	Take-off! The wheels leave the runway!
+takeoff	takeoff_03	Up it goes! A clean take-off!
+takeoff	takeoff_04	The plane lifts off the runway and climbs away. Lovely.
+takeoff	takeoff_05	Airborne! The pilot pulls up, and the plane soars.
+takeoff	takeoff_06	[excited] Wheels up! We have take-off!
+takeoff	takeoff_07	Down the runway and into the sky. Beautiful take-off.
+takeoff	takeoff_08	Take-off! Not a single bounce. Impressive.
+takeoff	takeoff_09	The aircraft leaps into the air. What a sight.
+takeoff	takeoff_10	And we're flying! A smooth take-off from the space centre.
+takeoff	takeoff_11	Rotate... and lift-off! The plane is in the air.
+takeoff	takeoff_12	Take-off confirmed. The plane climbs into the evening sky.
+takeoff	takeoff_13	The runway falls away beneath it. They're flying!
+takeoff	takeoff_14	Airborne at last. The tower can breathe again.
+takeoff	takeoff_15	A perfect take-off. Somebody's been practising.
+liftoff	liftoff_46	Lift-off! The flight is under way!
+liftoff	liftoff_47	[excited] There it goes, up into the sky!
+liftoff	liftoff_48	The engines thunder, and the rocket rises. Lift-off!
+liftoff	liftoff_49	Lift-off! I never doubted it for a second. Well, maybe one second.
+liftoff	liftoff_50	Off the pad and climbing! Great start!
+liftoff	liftoff_51	[excited] Lift-off! What a beautiful launch!
+liftoff	liftoff_52	The rocket heaves itself off the ground. Lift-off!
+liftoff	liftoff_53	Away it goes! The pad crew is cheering.
+liftoff	liftoff_54	Lift-off! That's the loudest thing I've heard all week.
+liftoff	liftoff_55	Up and away! Lift-off confirmed!
+liftoff	liftoff_56	The launch clamps release, and the rocket rises. Here we go!
+liftoff	liftoff_57	[excited] It's off! Look at that flame!
+liftoff	liftoff_58	Lift-off! The adventure begins now.
+liftoff	liftoff_59	And the rocket climbs away from the space centre. Lift-off!
+liftoff	liftoff_60	Lift-off! Safe travels, crew!
+liftoff	liftoff_61	There's the launch, and what a launch it is.
+crash	crash_47	[gasps] That's a crash! We're waiting for word on the crew.
+crash	crash_48	Oh dear. That's not how you land a rocket.
+crash	crash_49	Well. That happened.
+crash	crash_50	[shocked] The craft has been destroyed! Stay with us.
+crash	crash_51	A spectacular crash. Spectacular, and very expensive.
+crash	crash_52	That's going to need more than a coat of paint.
+crash	crash_53	[gasps] Kaboom! I felt that one in the studio.
+crash	crash_54	And there goes the craft, in a ball of fire.
+crash	crash_55	[sighs] Another one for the scrapyard.
+crash	crash_56	Crash! The fire crews are rolling out.
+crash	crash_57	That didn't look survivable for the craft. The crew, we hope, is fine.
+crash	crash_58	Down it comes, the hard way.
+crash	crash_59	An explosion lights up the sky. That's not good.
+crash	crash_60	Ladies and gentlemen... that was a crash.
+crash	crash_61	[clears throat] We'll be right back after these... technical difficulties.
+orbit	orbit_42	Orbit achieved! The crew is going round the world.
+orbit	orbit_43	They're in orbit! A wonderful flight so far.
+orbit	orbit_44	Orbit! The engines can take a well-earned rest.
+orbit	orbit_45	[excited] And they've done it! Orbit!
+orbit	orbit_46	A stable orbit, right where they wanted it.
+orbit	orbit_47	In orbit now, and the view must be breathtaking.
+orbit	orbit_48	Orbit confirmed! Let's hear it for the crew!
+orbit	orbit_49	They're up there, falling round the world forever. Orbit!
+orbit	orbit_50	Orbit. Every flight's first big goal, achieved.
+orbit	orbit_51	The craft settles into orbit. Mission control is delighted.
+orbit	orbit_52	Round and round they go. Orbit!
+orbit	orbit_53	Orbit at last. What a climb that was.
+orbit	orbit_54	[proudly] They've reached orbit. I'm so proud of them.
+orbit	orbit_55	In orbit! The rest of the system is within reach now.
+orbit	orbit_56	Orbit. The crew can finally relax and enjoy the ride.
+touchdown	touchdown_37	Touchdown! Safe on the ground.
+touchdown	touchdown_38	They're down! A good landing.
+touchdown	touchdown_39	[relieved] Landed safely. Thank goodness.
+touchdown	touchdown_40	The craft touches down gently. Well flown.
+touchdown	touchdown_41	Touchdown! That was close to perfect.
+touchdown	touchdown_42	Down and safe. The crew can breathe again.
+touchdown	touchdown_43	Landed! What a flight it's been.
+touchdown	touchdown_44	A safe touchdown. The engineers are smiling.
+touchdown	touchdown_45	Touchdown! They've done it!
+touchdown	touchdown_46	The landing legs touch, and the craft settles. Lovely.
+touchdown	touchdown_47	Landed safely, and not a scratch on it.
+touchdown	touchdown_48	Touchdown! The ground crew is running out to meet them.
+touchdown	touchdown_49	And they're down. Beautiful landing.
+touchdown	touchdown_50	Touchdown confirmed. A happy ending tonight.
+touchdown	touchdown_51	Safe on the ground. That's what we like to see.
+quiet	quiet_81	We're still watching, and so far everything is fine.
+quiet	quiet_82	The craft carries on. Nothing to report.
+quiet	quiet_83	A calm moment. The crew is busy with checklists.
+quiet	quiet_84	Steady progress tonight. Good work, everyone.
+quiet	quiet_85	[chuckles] Our producer wants me to say something exciting. Everything is fine. That's exciting, right?
+quiet	quiet_86	Quiet skies. Steady craft. Happy crew.
+quiet	quiet_87	The flight goes on, smooth and steady.
+quiet	quiet_88	Mission control reports nominal readings across the board.
+quiet	quiet_89	Nothing dramatic happening. We'll take it.
+quiet	quiet_90	The craft drifts along. Lovely to watch.
+quiet	quiet_91	Still on course. Still looking good.
+quiet	quiet_92	A quiet stretch of flight. Perfect time to stretch your legs.
+quiet	quiet_93	The crew is calm, and so are we. Mostly.
+quiet	quiet_94	Nothing new, nothing wrong. Just a good flight.
+quiet	quiet_95	We'll stay with the craft as it goes.
+quiet	quiet_96	Our cameras show a steady flight. Excellent.
+quiet	quiet_97	All is well. The crew is doing great.
+quiet	quiet_98	It's been a smooth ride so far. Let's keep it that way.
+quiet	quiet_99	A quiet moment on the flight. We'll be right here.
+quiet	quiet_100	The instruments look good. The crew looks good. I look good.
+quiet	quiet_101	Mission control is keeping a close eye. As are we.
+quiet	quiet_102	Nothing to report. Somewhere, an engineer is very relieved.
+quiet	quiet_103	Calm and steady. Just the way we like it.
+quiet	quiet_104	The flight continues without a hitch.
+quiet	quiet_105	A peaceful stretch. Enjoy it while it lasts, folks.
+welcome	welcome_42	Good evening. Kerbal News Network is on the air.
+welcome	welcome_43	Welcome, everyone. Let's see what's happening at the space centre.
+welcome	welcome_44	Good evening from the KNN studio. We're live.
+welcome	welcome_45	This is Kerbal News. Our cameras are ready. Let's begin.
+welcome	welcome_46	Welcome to the programme. It's going to be an interesting night.
+welcome	welcome_47	Good evening. I hope you're comfortable. This could get exciting.
+welcome	welcome_48	Hello, Kerbin. Kerbal News Network, live.
+welcome	welcome_49	Good evening. Tonight we follow a flight from start to finish.
+welcome	welcome_50	Welcome to KNN. The sky is waiting.
+welcome	welcome_51	Good evening and welcome. Let's go to the launch site.
+chutes	chutes_26	And the parachutes are out. A soft landing ahead.
+chutes	chutes_27	Chutes! The craft slows to a gentle drift.
+chutes	chutes_28	Parachutes open and looking healthy.
+chutes	chutes_29	There they are, the chutes, bright against the sky.
+chutes	chutes_30	The parachutes deploy cleanly. Almost home now.
+chutes	chutes_31	Chutes out! The hard part is over.
+chutes	chutes_32	[relieved] The parachutes are open. I can relax now.
+chutes	chutes_33	Big, beautiful parachutes. Exactly what we wanted to see.
+chutes	chutes_34	The chutes are holding. Nice and slow, crew.
+chutes	chutes_35	Parachutes deployed. The ground is coming up gently.
+splashdown	splashdown_26	Splashdown! And the sea is calm tonight. Lucky crew.
+splashdown	splashdown_27	Into the ocean they go! Safe splashdown.
+splashdown	splashdown_28	Splashdown confirmed. Someone fetch the boat.
+splashdown	splashdown_29	The capsule settles into the water. Lovely.
+splashdown	splashdown_30	[excited] Splashdown! They're home!
+splashdown	splashdown_31	A big splash, and then calm. Welcome home.
+splashdown	splashdown_32	Splashdown! The fish have some new neighbours.
+splashdown	splashdown_33	The craft bobs on the waves. Safe and sound.
+splashdown	splashdown_34	Down in the water, right side up. Perfect.
+splashdown	splashdown_35	Splashdown, and the recovery ship is already on its way.
+dock	dock_26	Docking complete! Precision in the dark.
+dock	dock_27	And they're joined together. Lovely flying.
+dock	dock_28	Docked! The hatches can open.
+dock	dock_29	A gentle bump, and they're docked.
+dock	dock_30	[impressed] What a docking! Not a millimetre out.
+dock	dock_31	Two craft, one dock. Beautiful.
+dock	dock_32	Docking confirmed. Time to swap stories.
+dock	dock_33	They've docked! The station just got a little bigger.
+dock	dock_34	A soft dock. Very nicely done.
+dock	dock_35	Docked, locked, and ready.
+flag	flag_26	A flag on the ground. Another first for the programme.
+flag	flag_27	The flag is up! The crew salutes.
+flag	flag_28	Planted! The flag flies proudly.
+flag	flag_29	There's our flag, on a brand new world.
+flag	flag_30	[proudly] A flag to mark the spot. History.
+flag	flag_31	Up goes the flag. Somebody hum the anthem.
+flag	flag_32	The flag is planted, and the crew is beaming.
+flag	flag_33	A flag stands where no flag has stood before.
+flag	flag_34	Flag planted. This place now has a story.
+flag	flag_35	The crew plants the flag. Magnificent.
+science	science_26	Science is in! The labs are celebrating.
+science	science_27	New data from the flight. Excellent.
+science	science_28	The scientists are very happy tonight.
+science	science_29	Research results received. Well done, crew.
+science	science_30	More science for the archives.
+science	science_31	The professors are scribbling furiously. Good science.
+science	science_32	Science! It's what we're here for.
+science	science_33	New knowledge from the frontier. Wonderful.
+science	science_34	The data is flowing in. The scientists are delighted.
+science	science_35	Another piece of the puzzle. Great work.
+lowfuel	lowfuel_26	The fuel is running low. Careful now.
+lowfuel	lowfuel_27	Fuel levels critical. This is getting tense.
+lowfuel	lowfuel_28	[tense] Very little fuel left. Every drop matters.
+lowfuel	lowfuel_29	Running on fumes. Let's hope it's enough.
+lowfuel	lowfuel_30	The tanks are nearly empty. Steady, crew.
+lowfuel	lowfuel_31	Low fuel. This is going to be close.
+lowfuel	lowfuel_32	Fuel is almost gone. Mission control is watching closely.
+lowfuel	lowfuel_33	Not much left in the tanks now.
+lowfuel	lowfuel_34	The fuel is nearly out. Make it count.
+lowfuel	lowfuel_35	Low fuel alert. Somebody check the maths.
+eva	eva_32	A kerbal steps outside. What courage.
+eva	eva_33	Out of the hatch and into space. Amazing.
+eva	eva_34	A spacewalk! The crew member is outside.
+eva	eva_35	The kerbal floats free beside the craft.
+eva	eva_36	Out they go! Enjoy the view.
+eva	eva_37	A crew member is outside. Careful, careful.
+eva	eva_38	There's a kerbal on the outside. Spectacular.
+eva	eva_39	A walk outside. The bravest stroll in the system.
+eva	eva_40	The hatch is open and a kerbal is out. Wonderful.
+eva	eva_41	[warmly] A kerbal outside, looking at the stars.
+newworld	newworld_36	They've entered a new world's domain.
+newworld	newworld_37	A new world's gravity has them. Onward!
+newworld	newworld_38	The craft crosses into new territory.
+newworld	newworld_39	Another world, and our crew is right on its doorstep.
+newworld	newworld_40	Into the pull of a new world. Exciting.
+newworld	newworld_41	A new world awaits. Steady as she goes.
+newworld	newworld_42	The crew has arrived at a new world's edge.
+newworld	newworld_43	New world, new adventure. Stay tuned.
+newworld	newworld_44	They're far from home now. A new world has them.
+newworld	newworld_45	A brand new world ahead. Let's see what they find.
+reentry	reentry_36	Re-entry! Look at that fire.
+reentry	reentry_37	Coming home through the flames.
+reentry	reentry_38	[tense] The heat shield is glowing. Hang in there.
+reentry	reentry_39	Re-entry under way. The most dangerous part of the trip.
+reentry	reentry_40	A fireball in the sky. That's our crew.
+reentry	reentry_41	Plasma all around. Hold steady.
+reentry	reentry_42	Burning bright on the way home.
+reentry	reentry_43	The atmosphere is pushing back hard now.
+reentry	reentry_44	Re-entry heat is at its peak. Steady...
+reentry	reentry_45	Fire and fury, on the way home.
+signoff	signoff_27	That's all from the newsroom tonight. Good night.
+signoff	signoff_28	We'll leave it there. Thanks for watching Kerbal News.
+signoff	signoff_29	That's the end of our coverage. Clear skies, everyone.
+signoff	signoff_30	Good night from KNN. See you at the next launch.
+signoff	signoff_31	And that's the news. Fly safe.
+signoff	signoff_32	Thank you for joining us. Good night.
+signoff	signoff_33	We're signing off. Keep your eyes on the stars.
+signoff	signoff_34	That's it for tonight. Soft landings, everyone.
+signoff	signoff_35	This has been Kerbal News. Good night and good luck.
+signoff	signoff_36	Until next time, keep looking up.
+joke	joke_01	I tried to write a joke about the Mun. It just didn't have enough atmosphere.
+joke	joke_02	Why don't rockets ever get lonely? They always have a booster.
+joke	joke_03	What's a kerbal's favourite key on the keyboard? The space bar. Followed closely by quicksave.
+joke	joke_04	How do you organise a party in space? You planet.
+joke	joke_05	Why did the satellite break up with the rocket? It needed some space.
+joke	joke_06	I asked our engineers how many struts the new rocket needs. They said: yes.
+joke	joke_07	What did Minmus say to the Mun? You're so dense. I'm mint.
+joke	joke_08	[chuckles] Why is Minmus so popular? It's in mint condition.
+joke	joke_09	I'd tell you a joke about Eve, but you'd never get out of it.
+joke	joke_10	Want to hear a joke about Jool? It's a gas.
+joke	joke_11	Why did the kerbal sit on the clock? He wanted to try time warp.
+joke	joke_12	What do you call a rocket that tells jokes? A launcher. [sighs] I'll see myself out.
+joke	joke_13	Our engineers have a motto: if at first you don't succeed, add more boosters.
+joke	joke_14	Why did the probe core feel lonely? Nobody would talk to it without a relay.
+joke	joke_15	They say the Mun is made of cheese. Our scientists checked. It's mostly rock. With a hint of disappointment.
+joke	joke_16	Why did the rocket go to school? To get a little higher education.
+joke	joke_17	What's an astronaut's favourite meal? Launch.
+joke	joke_18	Why did the kerbal stare at the carton of orange juice? It said concentrate.
+joke	joke_19	What do planets like to read? Comet books.
+joke	joke_20	Why was the Mun short of money? It was down to its last quarter.
+joke	joke_21	What do you call a tick on the Mun? A luna-tick.
+joke	joke_22	Did you hear about the claustrophobic astronaut? He just needed a little space.
+joke	joke_23	How do you know when the Mun has had enough to eat? When it's full.
+joke	joke_24	Where do kerbals park their spaceships? At a parking meteor.
+joke	joke_25	What did one orbit say to the other? Let's go round together sometime.
+joke	joke_26	What's Jebediah's favourite game? Hide and go boom.
+joke	joke_27	What did the rocket say to the launch pad? Thanks for the lift. Literally.
+joke	joke_28	Mission control asked for a status report. The rocket replied in smoke signals. Mostly smoke.
+joke	joke_29	Our engineers built a rocket so big it has its own weather. Mostly fire.
+joke	joke_30	What do you call a kerbal who reads the manual? Nobody knows. It's never happened.
+joke	joke_31	Bob Kerman says science is all about asking questions. Jeb says it's all about asking forgiveness.
+joke	joke_32	Why did the solar panel break up with the battery? It found someone brighter.
+joke	joke_33	How many kerbals does it take to change a light bulb? Just one. But he'll need a rocket to get up there.
+joke	joke_34	What did the asteroid say to the rocket? Nice to meet you. Briefly.
+joke	joke_35	I asked an engineer if the rocket was stable. He said: define stable.
+joke	joke_36	[chuckles] What's the loudest pet you can own? A trumpet. Nothing to do with rockets. I'm just in a good mood.
+joke	joke_37	Did you hear about the rocket that took up comedy? All its jokes went over everyone's heads.
+joke	joke_38	Why did the kerbal fail his pilot's exam? He kept pressing the space bar to see what would happen.
+joke	joke_39	The definition of optimism: a kerbal packing a return ticket.
+joke	joke_40	Why did the probe go to the doctor? It had a bad case of signal loss.
+joke	joke_41	Our flight director says no plan survives first contact with Jebediah.
+joke	joke_42	What's a rocket's favourite music? Heavy metal. Very heavy. Several tonnes of it.
+joke	joke_43	Why do kerbals love the night sky? It's the only place the explosions look pretty.
+joke	joke_44	Why did the engineer break up with the struts? She felt too tied down.
+joke	joke_45	What does a kerbal call a perfectly smooth flight? A rumour.
+joke	joke_46	How do you make a rocket laugh? Tickle its fuel lines. Please don't. That's how fires start.
+joke	joke_47	Why did the capsule blush? It saw the rocket's bottom stage.
+joke	joke_48	Why do kerbals never play hide and seek on the Mun? Nowhere to hide. Lots of craters, though.
+joke	joke_49	What's a kerbal's favourite exercise? Lunges. Lunar lunges.
+joke	joke_50	Why did the kerbal plant his flag upside down? He was on the other side of the planet.
+joke	joke_51	What do you call a group of kerbals in a capsule? A crew. And after reentry? A toasty crew.
+joke	joke_52	A good engineer measures twice and cuts once. A kerbal engineer measures once, cuts twice, and adds more struts.
+joke	joke_53	Why is Duna's sky so moody? It's seeing red.
+joke	joke_54	Why is the rocket never invited to parties? It always leaves with a bang.
+joke	joke_55	Breaking news: a kerbal has invented a rocket with no explosions. Experts are calling it a car.
+joke	joke_56	Why did the kerbal take a ruler to Minmus? To see how flat the flats really are.
+joke	joke_57	What do you call a kerbal on Jool? Lost. Very, very lost.
+joke	joke_58	Why don't kerbals tell secrets in orbit? Too many satellites listening.
+joke	joke_59	Our weather kerbal says the forecast is clear, with a chance of debris.
+joke	joke_60	What did the engineer say to the exploded rocket? Well, that's one way to stage it.
+joke	joke_61	I'd make a joke about the space programme's budget, but it would cost too much.
+joke	joke_62	Why do kerbals bring a sandwich to the launch pad? In case of a long countdown. They're all long.
+joke	joke_63	Why don't rockets wear watches? They always know when it's time to go.
+joke	joke_64	What did the flight controller say when the rocket flipped over? Well, at least it's consistent.
+joke	joke_65	What do you call a crash that lands on its feet? A landing. We count it.
+joke	joke_66	Why do kerbals make great comedians? Their timing is explosive.
+joke	joke_67	Why is the reaction wheel always so calm? It knows how to turn things around.
+joke	joke_68	There are two kinds of rocket: the ones that fly, and the ones that teach you something.
+joke	joke_69	What did one engine say to the other at full throttle? Is it hot in here, or is it just us?
+joke	joke_70	Why are kerbal parties the best? Everybody brings their own fireworks. Not on purpose.
+joke	joke_71	Why did the kerbal bring a ladder to the launch pad? He heard the price of fuel was going up.
+joke	joke_72	What's black and white and red all over? A kerbal reading tonight's crash report.
+joke	joke_73	A kerbal walks into a bar. It's a docking port. Three hours later, he's still lining up.
+joke	joke_74	What do you call a kerbal with no parachute? A meteorite. [clears throat] Sorry. Too soon.
+joke	joke_75	Why are kerbals bad at keeping secrets? Everything they build gets out eventually. Usually in pieces.
+joke	joke_76	What's the hardest part of being an astronaut? Explaining to your mum why the capsule has a hole in it.
+joke	joke_77	Why did Gilly feel left out? Everyone said it was too small to matter. Then it caught a kerbal. Very gently.
+joke	joke_78	What's the best way to catch a falling star? Ask Jeb. He's usually the one falling.
+joke	joke_79	What do kerbals spread on their toast? Mun marmalade. Minmus mint, on special occasions.
+joke	joke_80	Why did the parachute go to therapy? It had trouble opening up.
+joke	joke_81	Why did the kerbal paint his rocket red? So it would go faster. That's how it works. Ask any engineer.
+joke	joke_82	What do you call a rocket with no engines? A very tall decoration.
+joke	joke_83	Why are spacesuits so expensive? Because the price is out of this world.
+joke	joke_84	Why did the moon go to the bank? To change its phases.
+joke	joke_85	Why did the kerbal refuse to fly to Moho? He heard it was too hot to handle.
+joke	joke_86	Knock knock. Who's there? Orbit. Orbit who? Orbit-ter get to the launch pad, we're late.
+joke	joke_87	Why did the rocket scientist break up with the astronaut? They were drifting apart.
+joke	joke_88	What do you call a kerbal who loves fire? Jebediah. Next question.
+joke	joke_89	What's a kerbal's favourite sandwich? A launch-on-rye. With extra boosters on the side.
+joke	joke_90	Why do kerbals always win at hide and seek? They're very good at disappearing. Usually in a flash.
+joke	joke_91	How does a kerbal spell success? S, T, R, U, T, S.
+joke	joke_92	Why did the kerbal stand on the fuel tank? He wanted to be on top of things.
+joke	joke_93	What do you get if you cross a rocket with a kangaroo? A very bouncy landing.
+joke	joke_94	Why is Bob always calm before a launch? He's already done the maths. Twice. Then he stopped looking.
+joke	joke_95	What do astronauts use to keep their trousers up? Asteroid belts.
+quiet	quiet_106	Not much happening right now. Which, in this line of work, is a very good thing.
+quiet	quiet_107	A quiet moment. I'll take it.
+quiet	quiet_108	While we have a moment, a quick hello to everyone at mission control. Yes, I can see you waving.
+quiet	quiet_109	[thoughtful] You know, I've been doing this a long time, and it never stops being amazing.
+quiet	quiet_110	Things are calm out there. Let's enjoy it while it lasts.
+quiet	quiet_111	If you're just tuning in: you haven't missed a thing. Yet.
+quiet	quiet_112	I'm told the crew is doing fine. I'm also told to stop asking.
+quiet	quiet_113	In the meantime, let's all take a deep breath. In... and out. Lovely.
+quiet	quiet_114	While nothing is exploding, let me just say: well done, everyone. So far.
+quiet	quiet_115	It's quiet. Almost too quiet. [chuckles] No, it's fine. It's just quiet.
+quiet	quiet_116	Nothing to report, and I mean that in the best possible way.
+quiet	quiet_117	We'll keep the cameras rolling. Something always happens eventually.
+quiet	quiet_118	A reminder to our younger viewers: rockets are not toys. Unless you're Jebediah.
+quiet	quiet_119	So far, so good. Let me knock on wood. Our desk is wood, isn't it? Good.
+quiet	quiet_120	You can tell a good flight by how little there is to say about it.
+quiet	quiet_121	While we wait, let me just straighten my tie. There. Very professional.
+quiet	quiet_122	I've been told I talk too much during the quiet bits. I disagree. Strongly. At length.
+quiet	quiet_123	Let's take a moment to appreciate the engineers. They built this thing, after all. We can blame them later if needed.
+quiet	quiet_124	No news is good news. Unless you're a newsreader. Then it's just quiet.
+quiet	quiet_125	If you've just joined us, welcome. Grab a seat, grab a snack. It's a long way up.
+quiet	quiet_126	Mission control reports all systems nominal. That's engineer for: nobody panic.
+quiet	quiet_127	A good moment to check on your snacks. Mine are... gone. Who ate my snacks?
+quiet	quiet_128	Somewhere out there, a kerbal is having the time of their life. Or the fright of it. Hard to tell from here.
+quiet	quiet_129	[warmly] Thank you for keeping us company tonight. It means a lot.
+quiet	quiet_130	Just a reminder: everything you're seeing is live. There are no retakes in rocketry.
+quiet	quiet_131	The crew's heart rates are steady. Mine isn't. Too much coffee.
+quiet	quiet_132	We're still here. They're still up there. Everything's as it should be.
+quiet	quiet_133	Let me just shuffle my papers importantly... There. Very official.
+quiet	quiet_134	In quiet moments like this, I like to think about how far we've come. Mostly upwards.
+quiet	quiet_135	You know what this programme needs? More snacks. I'll raise it at the next meeting.
+quiet	quiet_136	The flight carries on. Not every minute can be a highlight. This one, for instance.
+quiet	quiet_137	I've never been to space myself. But I've watched so many kerbals do it, I feel I've earned an honorary patch.
+quiet	quiet_138	A peaceful moment. Let's keep it that way, shall we, crew?
+quiet	quiet_139	The craft is doing its thing, and doing it well. I'll stop talking for a bit... No, I won't.
+quiet	quiet_140	These are the moments the crew trained for. The boring ones. They're very good at them.
+quiet	quiet_141	I always say: a calm mission is a happy mission. I say it a lot. Mostly to myself.
+quiet	quiet_142	Out there, it's just the crew, the craft, and an awful lot of sky.
+quiet	quiet_143	Keep watching, folks. Space has a way of surprising us.
+quiet	quiet_144	I could get used to this pace. Don't tell my producer.
+quiet	quiet_145	Let's check in on the crew... and they look absolutely fine. Carry on, everyone.
+fact	fact_01	Did you know? Kerbin turns once every six hours. That's four sunrises a day, for anyone keeping count.
+fact	fact_02	Here's a fact for you: Kerbin's atmosphere ends at seventy kilometres. Above that, it's officially space.
+fact	fact_03	To stay in orbit just above Kerbin's air, a craft needs to go about two thousand three hundred metres a second. Sideways.
+fact	fact_04	The Mun is Kerbin's larger moon, and it's covered in craters. Some of them, I'm told, were made by us.
+fact	fact_05	Minmus, Kerbin's smaller moon, has wide, flat plains. Perfect for landing. And, some say, for ice skating.
+fact	fact_06	On Minmus, the gravity is so weak that a kerbal could almost jump into orbit. Almost. Please don't try.
+fact	fact_07	Duna, the red planet, has a thin atmosphere. Parachutes help there, but bring a few extra.
+fact	fact_08	Duna has a moon of its own, called Ike. The two face each other always, so Ike hangs still in Duna's sky.
+fact	fact_09	Eve is a purple world with a thick, heavy atmosphere. Landing is easy. Leaving is another matter entirely.
+fact	fact_10	Eve's air is so thick that a rocket needs to be enormous just to climb out. Many kerbals have tried. Some are still there.
+fact	fact_11	Gilly is a tiny moon of Eve. Its gravity is so gentle that a landing is more of a polite bump.
+fact	fact_12	Moho is the closest planet to the sun. Hot, small, and very hard to reach. Bring sunscreen.
+fact	fact_13	Jool is a giant green ball of gas. You can't land on it. You can only fall into it, forever.
+fact	fact_14	Jool has five moons: Laythe, Vall, Tylo, Bop and Pol. Quite the busy household.
+fact	fact_15	Laythe is an ocean moon of Jool, with air you could almost breathe. Almost. Keep your helmet on.
+fact	fact_16	Tylo has no air at all, and strong gravity. Landing there is one of the hardest things a pilot can attempt.
+fact	fact_17	Vall is an icy moon of Jool. Cold, pale, and quite beautiful, if you like that sort of thing.
+fact	fact_18	Bop is a small, lumpy moon of Jool. Some say it's a captured asteroid. Bop isn't saying.
+fact	fact_19	Pol, the smallest of Jool's moons, looks a little like a grain of pollen. Small, yellow and lumpy.
+fact	fact_20	Dres is a little dwarf planet between Duna and Jool, with deep canyons. Many forget it exists. Dres has feelings too.
+fact	fact_21	Eeloo is the farthest world from the sun. Icy, distant, and very, very cold.
+fact	fact_22	Light from the sun takes about forty-five seconds to reach Kerbin. So the sunshine you see is always a little bit old.
+fact	fact_23	A day on the Mun lasts about six and a half Kerbin days. Very long afternoons.
+fact	fact_24	The Mun has no air, so parachutes are no use there. Engines and a steady hand are the only way down.
+fact	fact_25	From the Mun, Kerbin looks like a bright blue marble. Our home. Rather pretty, actually.
+fact	fact_26	In orbit, everything is falling. The trick is to fall sideways so fast that you keep missing the ground.
+fact	fact_27	Higher orbits are slower orbits. It sounds wrong, and it's completely right.
+fact	fact_28	To catch up with something ahead of you in orbit, you slow down. Yes, really. Orbits are strange.
+fact	fact_29	The highest point of an orbit is called the apoapsis, and the lowest the periapsis. Now you know.
+fact	fact_30	To raise one side of an orbit, the best place to burn is on the opposite side. Orbital mechanics. Never simple.
+fact	fact_31	Kerbin's oceans cover most of its surface. Which is why so many of our flights end with a splash.
+fact	fact_32	Kerbin has ice caps at both poles. Good for skiing. Bad for landing.
+fact	fact_33	The space centre sits near Kerbin's equator. That gives every eastward launch a free push from the planet's spin.
+fact	fact_34	Launching east is easier than launching west, because Kerbin is already spinning that way. Free speed.
+fact	fact_35	A sphere of influence is the region where a world's gravity is in charge. Cross the line, and you belong to someone new.
+fact	fact_36	The Mun's gravity is about a sixth of Kerbin's. Kerbals bounce there. It's quite a sight.
+fact	fact_37	In space there's no air to carry sound, so every explosion up there is completely silent. Small mercies.
+fact	fact_38	The quickest way to the Mun isn't a straight line. It's a careful curve, timed just right.
+fact	fact_39	A gravity assist is when a craft borrows speed from a passing world. The world never notices. Very generous.
+fact	fact_40	Aerobraking means using a planet's air to slow down. It's free, it's fast, and it's very, very hot.
+fact	fact_41	Reentry heat isn't really friction. It's the air in front of the craft squeezed so hard that it glows.
+fact	fact_42	Solar panels give less power the farther you go from the sun. Out by Jool, they're barely trying.
+fact	fact_43	Monopropellant feeds the little thrusters that turn and nudge a craft. Tiny puffs, big difference.
+fact	fact_44	Ion engines are wonderfully efficient and wonderfully gentle. Like being pushed along by a polite breeze.
+fact	fact_45	Most rocket engines burn liquid fuel and oxidiser together. Neither works alone. A true partnership.
+fact	fact_46	A solid rocket booster can't be turned off once it's lit. It's committed. We admire that.
+fact	fact_47	Kerbin's tallest mountains rise more than six kilometres. Good for the view. Bad for low flying.
+fact	fact_48	There's a desert on Kerbin, with a pyramid in it. Nobody knows who built it. Nobody admits to it, anyway.
+fact	fact_49	Rumour has it there are strange things hidden around the worlds. Monoliths, faces, arches. Keep your eyes open.
+fact	fact_50	Minmus is thought to be made largely of ice. Some kerbals insist it's mint ice cream. Science remains divided.
+fact	fact_51	Jool's moons tug on each other in a complicated dance. Navigating there takes patience. And snacks.
+fact	fact_52	A low orbit around Kerbin takes about half an hour. A quick lap.
+fact	fact_53	A satellite about two thousand eight hundred kilometres above Kerbin keeps pace with the turning planet, and seems to hang still in the sky.
+fact	fact_54	The space centre's first four astronauts were Jebediah, Bill, Bob and Valentina. Every one of them a legend.
+fact	fact_55	The air gets thinner the higher you go. By twenty kilometres up, almost all of it is below you.
+fact	fact_56	Wings need air to work. In space they're just decoration. Elegant decoration, mind you.
+fact	fact_57	Every rocket is mostly fuel. The bit that actually goes anywhere is surprisingly small.
+fact	fact_58	Parachutes work best in thick air. On Duna you'll want more of them. On the Mun, they're purely ornamental.
+fact	fact_59	Some of the Mun's deepest craters stay dark for days at a time. Not the place for a picnic.
+fact	fact_60	The farther a world is from the sun, the slower it goes round. Eeloo takes ages. Moho fairly zips.
+studio	studio_01	Pardon me while I have a sip of coffee. Rocket-grade.
+studio	studio_02	My producer is waving at me. I think that means keep talking. Or it means my tie is crooked. Hard to tell.
+studio	studio_03	Our weather desk tells me it's sunny, with a slight chance of falling boosters.
+studio	studio_04	The teleprompter has just said: insert exciting fact here. Very helpful.
+studio	studio_05	Someone in the control room has just dropped a whole tray of snacks. Our thoughts are with them at this difficult time.
+studio	studio_06	I'm told our studio lights run on the same batteries as the rocket. So if I go dark, you'll know why.
+studio	studio_07	Our intern has asked me to mention that the coffee machine is broken. Again. Morale is low.
+studio	studio_08	If you can hear a strange humming, that's our camera operator. He does that during launches.
+studio	studio_09	Our sound engineer says I'm too loud. [whispers] Is this better? No? All right.
+studio	studio_10	The studio cat has wandered onto my desk. He's very interested in the orbital diagrams. Shoo, please.
+studio	studio_11	Apparently I have something on my face... Is it gone? Thank you.
+studio	studio_12	My chair just squeaked. That was the chair. I want to be absolutely clear about that.
+studio	studio_13	We're getting reports from the control room that someone has finished the biscuits. An investigation is under way.
+studio	studio_14	I'm told our ratings are up tonight. Thank you all. Or thank the rockets. One of the two.
+studio	studio_15	The camera's red light is on, which means I should probably keep talking. So. Rockets. Aren't they something?
+studio	studio_16	Our graphics department would like me to point at things. [clears throat] Look at that. Over there. Splendid.
+studio	studio_17	Our producer would like to remind you that this channel is not responsible for anything Jebediah does.
+studio	studio_18	I've just been handed a note. It says: you're doing great. Thank you, whoever wrote this. I needed that.
+studio	studio_19	Somebody has turned the studio heating up to reentry levels. Could we... thank you.
+studio	studio_20	I'm being told to wrap it up. No, wait. I'm being told to keep going. Make up your minds, please.
+studio	studio_21	Our engineers are watching this broadcast too. Hello, engineers. Please stop waving and get back to work.
+studio	studio_22	Note to self: never sit this close to the window during a launch again.
+studio	studio_23	My notes for this part just say: be charming. I'll do my best.
+studio	studio_24	Our make-up kerbal is signalling frantically. I suspect my hair is doing something unprofessional.
+studio	studio_25	Excuse me while I tidy my desk. Rocket schematics, rocket schematics, a sandwich... So that's where it went.
+studio	studio_26	Our studio gets very cold at night. I'm wearing three jumpers under this suit. You'd never know.
+studio	studio_27	Ah, the floor manager is giving me a thumbs up. Or a thumbs sideways. Somewhere in between, I suppose.
+studio	studio_28	My earpiece just crackled. I'm hearing either mission control or the cookery programme next door.
+studio	studio_29	We've had a small technical problem in the studio. Don't worry. Nothing's on fire. Nothing important, anyway.
+studio	studio_30	Someone has stuck a picture of Jebediah on the camera. Very motivating. Very distracting.
+studio	studio_31	I'd like to thank our camera operators, who've been standing very still for a very long time.
+studio	studio_32	A bit of news from behind the scenes: our studio has its own parachute. Nobody knows why. We've never asked.
+studio	studio_33	The control room has asked me to fill some time. Fortunately, I have plenty of time and a great many words.
+studio	studio_34	Our director tells me this is my good side. I didn't know I had one. How nice.
+studio	studio_35	There's a moth circling the studio lights. Little fellow's on his own mission, I suppose.
+studio	studio_36	A quick apology to the viewers at the back: I'm told I'm blocking the screen. I'll lean. There.
+studio	studio_37	I must say, this microphone has been very well behaved tonight. Better than some of our rockets.
+studio	studio_38	Our studio clock has stopped. Either it's broken, or time has stood still. I'm hoping for the second one.
+studio	studio_39	I've been asked to sit up straight. I am sitting up straight. This is as straight as I go.
+studio	studio_40	Somebody in the gallery just laughed. I'll take that as a compliment, whatever it was.
+mail	mail_01	Now, some viewer mail. A young kerbal from Kerbin City asks: can rockets go to the sun? Yes. Once.
+mail	mail_02	A viewer writes: why do rockets need so much fuel? Because, dear viewer, up is a very long way.
+mail	mail_03	We've had a letter asking why our rockets explode so often. Our engineers have asked me to say: no comment.
+mail	mail_04	Here's a letter from a little kerbal who wants to be an astronaut. Eat your vegetables, study hard, and always pack a parachute.
+mail	mail_05	A viewer asks if the Mun is really made of cheese. Our scientists say no. Our canteen says maybe.
+mail	mail_06	From our postbag: someone wants to know who cleans the launch pad. The answer is: whoever lost the coin toss.
+mail	mail_07	A viewer asks whether I've ever been to space. Not yet. Though I did once fall asleep in the simulator.
+mail	mail_08	Letter of the week: a kerbal asks why we always launch from the same place. Honestly? We know where the snacks are.
+mail	mail_09	Someone has written in to ask what happens if you sneeze in a spacesuit. The answer is: nothing good.
+mail	mail_10	A viewer in the mountains says the rockets are too loud. We've passed your complaint along to the rockets.
+mail	mail_11	More fan mail for Jebediah. Lots of it. Some of it is fan mail. Some of it is bills.
+mail	mail_12	A young viewer asks how kerbals go to the toilet in space. [clears throat] That's... a question for another day.
+mail	mail_13	A viewer wants to know why our parachutes are so colourful. So the recovery teams can find them. And because they look nice.
+mail	mail_14	Here's a letter asking whether your anchor is a real kerbal. I am. Mostly. On a good day.
+mail	mail_15	A viewer writes: my rocket keeps flipping over. What should I do? Fins at the bottom, dear viewer. Fins at the bottom.
+mail	mail_16	We've received a drawing of a rocket from a young fan. It has fourteen engines and a cat. We've forwarded it to engineering.
+mail	mail_17	Someone asks if there's life on other planets. We haven't found any yet. But we've left plenty of our own junk there.
+mail	mail_18	A viewer asks what the hardest part of my job is. Keeping a straight face during the crash reports.
+mail	mail_19	A letter from a worried grandmother, asking whether her grandson is safe up there. Madam, he is. He's having a lovely time.
+mail	mail_20	A viewer wants to know what's at the edge of the map. More map, I'm told. And then Eeloo.
+mail	mail_21	A viewer writes to say they watch every single launch. Thank you! You're braver than the crew.
+mail	mail_22	A kerbal asks if they're allowed to paint their rocket. Absolutely. Just not the bits that get hot.
+mail	mail_23	We've had a postcard from Minmus! Oh, no. It's from Minmus Street, in Kerbin City. Still very nice.
+mail	mail_24	A viewer asks why the rocket goes up and then sideways. To stay up, it has to go sideways very fast. Orbits are mostly sideways.
+mail	mail_25	A viewer asks how fast our rockets go. Fast enough to make the engineers nervous. Which is very fast indeed.
+mail	mail_26	A letter asks whether kerbals get space sick. Some do. Jebediah doesn't. Jebediah, we suspect, can't.
+mail	mail_27	Someone has asked for Bill Kerman's autograph. Bill says he's honoured, and asks whether you'd also like a spanner.
+mail	mail_28	A viewer asks what we do when nothing's happening. This. We do exactly this.
+mail	mail_29	From the postbag: can you see the space centre from orbit? You can! It's the bit with all the smoke.
+mail	mail_30	A young viewer asks if the Mun gets lonely. It has Minmus. And all our visitors. It's doing fine.
+mail	mail_31	A viewer writes: I built a rocket out of cardboard. Wonderful! Please don't light it.
+mail	mail_32	Here's a letter asking what our crews eat up there. Snacks. That's it. That's the whole menu.
+mail	mail_33	We've had a complaint that the news is too exciting. We'll try to blow up fewer things next week. No promises.
+mail	mail_34	Someone asks if I get nervous during launches. Only every single time.
+mail	mail_35	A viewer asks how they can become a newsreader. Practise talking for a very long time about things you don't understand. Like me.
+ad	ad_01	This bulletin is brought to you by Jebediah Kerman's Junkyard and Spaceship Parts Company. If it fell off a rocket, we've got it.
+ad	ad_02	Brought to you by Rockomax. Bigger rockets for bigger dreams. And bigger craters.
+ad	ad_03	This hour is sponsored by Kerbodyne. Because sometimes a little more thrust is a lot more fun.
+ad	ad_04	A word from our sponsors. Struts! When it absolutely, positively has to stay attached. Mostly.
+ad	ad_05	Tonight's news comes to you courtesy of Probodobodyne. Our probes go where kerbals fear to tread. Or simply can't fit.
+ad	ad_06	Feeling peckish after a long burn? Try Snack Rations. The official snack of kerbals who forgot to pack lunch.
+ad	ad_07	Sponsored by C7 Aerospace. Wings that work. Most of the time. On most planets.
+ad	ad_08	Zaltonic Electronics: powering your spacecraft, your space centre, and your midnight snack cravings.
+ad	ad_09	This programme is brought to you by FLOOYD Dynamics. Fuel tanks so roomy, you could live in one. Please don't.
+ad	ad_10	Goliath National Products. If it's large, loud and probably a bad idea, we make it.
+ad	ad_11	Brought to you by Periapsis Rocket Supplies. Getting you closer to the ground since day one. Gently, we hope.
+ad	ad_12	Experimental Engineering Group: we test it so you don't have to. Usually.
+ad	ad_13	Ionic Symphonic Protonic Electronics. We don't fully understand our products either, but they glow beautifully.
+ad	ad_14	STEADLER Engineering. Parts so steady, you'll forget you're strapped to a controlled explosion.
+ad	ad_15	WinterOwl Aircraft Company. Fly the friendly skies. The unfriendly ones too. We're not fussy.
+ad	ad_16	Kerlington Model Rockets: just like the real thing, but smaller, safer, and your parents won't worry as much.
+ad	ad_17	O.M.B. Demolition Enterprises. When you need it gone, and you need it gone with style.
+ad	ad_18	Reaction Systems Limited. Turning things around since the very first thruster.
+ad	ad_19	Sponsored by Integrated Integrals. Maths so advanced it works itself out. Just don't ask it to explain.
+ad	ad_20	Dinkelstein Kerman's Construction Emporium. Build it big. Build it tall. Build it before the inspector arrives.
+ad	ad_21	Moving Parts Experts Group. Hinges, pistons and rotors for every occasion. Some assembly, and some hope, required.
+ad	ad_22	Vac-Co Advanced Suction Systems. Everything sucks in space. We just do it better.
+ad	ad_23	Sean's Cannery. You've had his snacks. You've crashed with his snacks. Sean's: canned for the journey.
+ad	ad_24	Maxo Construction Toys. Clip it, stack it, launch it. Ages six and up. Jebediah: ages six and up.
+ad	ad_25	Brought to you by the Kerbal Insurance Company. We'll cover anything. Except rockets. Or kerbals. Or the launch pad.
+ad	ad_26	Lost your craft in the void? Try Bob's Lost and Found. We haven't found anything yet, but we're very optimistic.
+ad	ad_27	Moar Boosters Incorporated. Is your rocket not getting off the ground? You know what it needs.
+ad	ad_28	This segment is brought to you by Valentina's Flight Academy. Learn to land. Or at least learn to crash with confidence.
+ad	ad_29	Kerbal Krunch cereal. Now with real Minmus mint flavour. Part of a balanced launch-day breakfast.
+ad	ad_30	Parachutes by Bill. Every chute folded by hand, by Bill, who promises he was paying attention.
+ad	ad_31	Mun Cheese. The cheese that is definitely not from the Mun. We checked. Still delicious.
+ad	ad_32	Reliable Rocket Repairs. We fix what Jeb breaks. Business is booming. Literally.
+ad	ad_33	Tired of losing your pencils in zero gravity? Try Sticky-Strip! Or try anything, really. They're floating behind you.
+ad	ad_34	Visit the Kerbal Space Centre gift shop. Pick up a souvenir before the next launch takes the roof off.
+ad	ad_35	Brought to you by Jool Tours. See the green giant up close! Return trip not guaranteed.
+ad	ad_36	The Kerbin Tourist Board. Come for the launches, stay for the... well, the launches. We mostly have launches.
+ad	ad_37	Hot Rocket Coffee. Fuel for the kerbal who's been awake since the countdown started.
+ad	ad_38	Laythe Beach Resorts. Oceans, sunsets, and air you can almost breathe. Bring your helmet. And a towel.
+ad	ad_39	Sponsored by Gene Kerman's Flight Directing Seminars. Learn to say: we have a problem, with real confidence.
+ad	ad_40	Kerbin Kitchen Foil. Wrap your sandwiches, wrap your leftovers, wrap your capsule. Heat shields not included.
+warp	warp_01	Time is flying by. Literally. We've sped things up.
+warp	warp_02	We're in time warp now. Hours passing in moments. If only my lunch break worked like this.
+warp	warp_03	Fast forward! The days are rushing past up there.
+warp	warp_04	The clocks are spinning. Don't worry, we'll slow down for anything interesting.
+warp	warp_05	Watch the worlds wheel past. That's what time warp looks like from here.
+warp	warp_06	We're skipping ahead. Somewhere, a kerbal just aged a week in a minute. Lovely skin, though.
+warp	warp_07	Speeding through the boring bits. My favourite part of any broadcast.
+warp	warp_08	Time warp! The crew can catch up on their sleep. All of it. At once.
+warp	warp_09	Hours go by in a blink. If you blinked just then, you missed a whole orbit.
+warp	warp_10	In warp, the sun rises and sets like a flickering lamp. Rather beautiful, in its way.
+warp	warp_11	We're moving through time faster than the crew can say: are we nearly there yet?
+warp	warp_12	Fast-forwarding to the good bit. Bear with us.
+warp	warp_13	Everything is speeding up. Including my pulse. It's very exciting, watching nothing happen very quickly.
+warp	warp_14	Time warp. A long journey made short. Thank goodness.
+warp	warp_15	A week goes by in a heartbeat. I hope the crew packed enough snacks.
+warp	warp_16	The universe is in a hurry tonight. So are we.
+warp	warp_17	Somewhere in the control room, someone is holding down a very important button. Time flies.
+warp	warp_18	A long trip, and lots of waiting. Thankfully, we can skip most of it.
+warp	warp_19	If you're feeling dizzy, that's just the time warp. Or the coffee. Possibly both.
+warp	warp_20	Warp is on. I'll keep talking at normal speed, though. I'm a professional.
+warp	warp_21	The days are melting into each other. Not unlike a long weekend.
+warp	warp_22	Weeks are passing for the crew. Somebody check they've watered the plants.
+warp	warp_23	Time warp is a wonderful thing. If only I could use it on Monday mornings.
+warp	warp_24	Zipping through time. The stars barely know what's hit them.
+warp	warp_25	The journey goes on, at a brisk pace. A very brisk pace indeed.
+warp	warp_26	In warp, the planets dance. Slowly, gracefully, and much faster than usual.
+warp	warp_27	We'll let time do the heavy lifting for a while.
+warp	warp_28	Whoosh. That was a day. And another. And another.
+warp	warp_29	Hold tight. We'll slow down when we get there. Or when something explodes. Whichever comes first.
+warp	warp_30	Every minute down here is an hour up there. Or a day. I've lost count, frankly.
+warp	warp_31	The crew sleeps, the clock races, and we watch. A typical evening.
+warp	warp_32	Time warp: because space is big, and our viewers have bedtimes.
+warp	warp_33	Look at those orbits go. Like a spinning top, but with crew.
+warp	warp_34	I've aged about four seconds. The crew has aged about four days. Seems fair.
+warp	warp_35	Warping along nicely. Nothing to see here. Very quickly.
+coast	coast_01	The craft is coasting now, engines quiet, falling gracefully around the world.
+coast	coast_02	A peaceful orbit. Round and round they go.
+coast	coast_03	No engines, no noise. Just the long, silent arc of an orbit.
+coast	coast_04	The crew is enjoying the view, I'm sure. The world turning slowly below them.
+coast	coast_05	Coasting along. In space, you keep going whether you like it or not.
+coast	coast_06	Up there, the crew is weightless. Snacks float. Pencils float. Everything floats.
+coast	coast_07	A quiet orbit. The kind that makes you forget how hard it was to get there.
+coast	coast_08	The sun glints off the craft as it sails around the planet. Lovely shot, camera team.
+coast	coast_09	Engines off, crew relaxed. This is the gentle part of spaceflight.
+coast	coast_10	They're coasting. Which, in space, is basically flying for free.
+coast	coast_11	The craft hangs in the blackness, perfectly still. Except it's actually doing thousands of metres a second.
+coast	coast_12	Orbit is a strange place. You're moving terribly fast, and yet everything feels calm.
+coast	coast_13	The crew can see the whole curve of the world from up there. Imagine that.
+coast	coast_14	Coasting quietly. Every so often, a little puff of the thrusters to keep things pointed the right way.
+coast	coast_15	A good time for the crew to check their instruments. And their snacks.
+coast	coast_16	Nothing but stars and silence up there. And one very well-built spacecraft.
+coast	coast_17	Still in orbit, still looking good. That's my favourite kind of report.
+coast	coast_18	They're falling around the world, endlessly. It sounds frightening. It's actually very relaxing.
+coast	coast_19	The craft drifts on. Somewhere below, kerbals look up and wave.
+coast	coast_20	Coasting towards the next burn. Timing is everything in orbital flight.
+coast	coast_21	The crew floats in the cabin. I'm told it's the best sleep you'll ever have.
+coast	coast_22	From up there, the oceans shine and the clouds look like cotton wool. Not a bad office.
+coast	coast_23	A steady orbit. We'll wait for the next manoeuvre.
+coast	coast_24	Gliding through space, the engines cooling, the crew at ease.
+coast	coast_25	No air, no wind, no noise. Just the craft and its orbit.
+coast	coast_26	Long coasts like this are when the crew does their science. And their crossword.
+coast	coast_27	The craft is coasting on momentum alone. Isaac would be proud. Isaac Kerman, of course.
+coast	coast_28	Up there, you could stay in orbit for years without burning a drop. Gravity does all the work.
+coast	coast_29	Quiet in orbit. The crew might even be enjoying themselves.
+coast	coast_30	The craft swings around the world in a perfect loop. Well, nearly perfect. Engineers are fussy.
+coast	coast_31	Coasting through the void. Not a care in the world. Or rather, above it.
+coast	coast_32	The view must be extraordinary. Clouds, oceans, mountains, all sliding by.
+coast	coast_33	In orbit, there's no up and no down. Just round.
+coast	coast_34	The craft continues its patient circle. Spaceflight is mostly waiting, beautifully.
+coast	coast_35	The engines rest. The crew rests. Even I'm resting. A little.
+coast	coast_36	A clean orbit, and a calm crew. Mission control is smiling.
+coast	coast_37	Drifting along in silence. You can almost hear the stars. You can't, of course. Space is very quiet.
+coast	coast_38	The craft passes over the space centre. Somebody wave.
+coast	coast_39	Coasting through space at a speed that would make your ears pop. If you had air. Which you don't.
+coast	coast_40	Smooth sailing up there. If sailing involved no water, no wind, and a great deal of falling.
+night	night_01	It's night down there. The craft sails through the planet's shadow.
+night	night_02	Darkness all around. The crew is flying by starlight now.
+night	night_03	The sun has set on the craft. Out come the stars. Millions of them.
+night	night_04	In the shadow of the world, it's very dark and very cold. Good thing they brought blankets.
+night	night_05	The craft slips into darkness. It'll be daylight again soon enough.
+night	night_06	Flying through the night. The instruments glow softly in the cabin.
+night	night_07	It's dark out there. The kind of dark you only get in space.
+night	night_08	The planet blocks out the sun now. Night falls, fast and complete.
+night	night_09	In the dark, the crew has a perfect view of the stars. Some say it's the best view there is.
+night	night_10	Night has fallen on the mission. Everything looks calmer in the dark.
+night	night_11	Darkness. Somewhere below, kerbals are tucked up in bed. Not this crew.
+night	night_12	The craft's lights are the only thing out there. A little island of light in the night.
+night	night_13	It's night-time for the crew. I hope they remembered to switch on the cabin lights.
+night	night_14	The dark side of the world. A bit spooky, and rather beautiful.
+night	night_15	Under the stars now. A lovely, lonely sight.
+night	night_16	The craft passes through the night, silent and steady.
+night	night_17	No sun now. Just the glow of the instruments and the stars beyond.
+night	night_18	It's night, and the stars are out in force. Space really shows off in the dark.
+night	night_19	Darkness, then dawn. That's the rhythm of a flight around the world.
+night	night_20	In the planet's shadow, it gets cold very quickly. Let's hope the heaters are working.
+night	night_21	The night side is quiet. The craft drifts on, waiting for the sun.
+night	night_22	Night below, night above. It's night all over, really.
+night	night_23	The stars are out. The crew is out. Everybody's out. Except the sun.
+night	night_24	Night falls on our brave crew. Goodnight, crew. Well, not yet. Keep flying.
+night	night_25	It's very dark out there. Our camera team is doing their best. Very brave cameras.
+night	night_26	Into the shadow they go. A few minutes of darkness, and then the sun again.
+night	night_27	Flying in the dark takes nerve. Luckily, our crews have plenty.
+night	night_28	The world turns its back on the sun, and our craft goes with it.
+night	night_29	Night up there. The most peaceful dark you'll ever know.
+night	night_30	With the sun gone, every star in the sky comes out to watch our crew go by.
+sunrise	sunrise_01	And there's the sunrise! Over the curve of the world.
+sunrise	sunrise_02	Here comes the sun. Golden light along the horizon.
+sunrise	sunrise_03	Dawn breaks over the planet. The crew has the best seat in the house.
+sunrise	sunrise_04	Sunrise in orbit! It comes round every half hour or so up there, and it never gets old.
+sunrise	sunrise_05	The sun peeks over the edge of the world. Good morning, crew!
+sunrise	sunrise_06	Light returns! The craft glints in the first rays of dawn.
+sunrise	sunrise_07	A new day. Again. Up there they come thick and fast.
+sunrise	sunrise_08	There's the sun, right on time, rising over the planet's rim.
+sunrise	sunrise_09	Morning has broken. Several times today, in fact.
+sunrise	sunrise_10	A thin line of fire along the horizon, then the full blaze of the sun. Beautiful.
+sunrise	sunrise_11	The sunrise from orbit. Kerbals have written poems about this. Mostly bad ones. But heartfelt.
+sunrise	sunrise_12	Dawn again. The crew must be losing count by now.
+sunrise	sunrise_13	The darkness lifts, and the world below lights up. What a sight.
+sunrise	sunrise_14	Good morning, everyone! At least, it's morning up there.
+sunrise	sunrise_15	Sunrise. The solar panels will be very pleased.
+sunrise	sunrise_16	Here's the sun again, warming the craft after the long dark.
+sunrise	sunrise_17	And just like that, the night is over. Orbits are wonderfully quick.
+sunrise	sunrise_18	The sun climbs over the edge of the planet. Every colour you can think of, all at once.
+sunrise	sunrise_19	Daylight again! The crew can put the torches away.
+sunrise	sunrise_20	Dawn from space. I'd give anything to see that in person. Except, perhaps, the ride up.
+rover	rover_01	And the rover is on the move! Slow and steady across the surface.
+rover	rover_02	Wheels turning, the rover rolls on. Watch out for rocks.
+rover	rover_03	A bit of a road trip. No roads, of course. Just the open ground.
+rover	rover_04	The rover bumps along. I hope the crew have strapped themselves in.
+rover	rover_05	Driving on another world. The ultimate scenic route.
+rover	rover_06	Careful on those slopes. Rovers are brave, but they're not always graceful.
+rover	rover_07	The rover kicks up the dust as it goes. Lovely driving.
+rover	rover_08	Off-road, and how. The rover heads for the horizon.
+rover	rover_09	Every bump is a little adventure. The rover takes them all in its stride.
+rover	rover_10	No speed limits out here. But there are rocks. Lots and lots of rocks.
+rover	rover_11	The rover trundles on. Somewhere out there, there's science waiting.
+rover	rover_12	A gentle drive across the surface. The crew can take in the sights.
+rover	rover_13	Wheels in the dirt, eyes on the horizon. That's exploring.
+rover	rover_14	The rover climbs a little rise, and down the other side. Smoothly done.
+rover	rover_15	Look at it go. A little machine, a long way from home, rolling along.
+rover	rover_16	Driving in low gravity is tricky. Too fast, and you start flying. Not recommended.
+rover	rover_17	The rover's making good time. Not that there's anywhere to be.
+rover	rover_18	Careful now. Rovers have a habit of flipping over when you least expect it.
+rover	rover_19	A steady drive. The tyres are holding up nicely.
+rover	rover_20	Out on the surface, the rover is the only thing moving for miles.
+rover	rover_21	The rover rattles across the ground. The engineers did say it would be bumpy.
+rover	rover_22	Where's it going? Wherever the driver fancies. That's the beauty of it.
+rover	rover_23	The rover wanders on, exploring. Every crater a new discovery.
+rover	rover_24	A long, quiet drive. Perfect for thinking. Or singing, if the crew's so inclined.
+rover	rover_25	Slow and sure. The rover knows there's no rush.
+rover	rover_26	There it goes, up and over. What a sturdy little vehicle.
+rover	rover_27	Bump. Bump. Bump. The rover's suspension is earning its keep today.
+rover	rover_28	Driving where no kerbal has driven before. Mind the boulders.
+rover	rover_29	The tracks it leaves will last for ages out here. A signature written on the land.
+rover	rover_30	Steady on the throttle. A rover is a marathon runner, not a sprinter.
+cruise	cruise_01	The aircraft is cruising now, level and steady.
+cruise	cruise_02	Smooth flying. The plane slices through the sky like a knife through butter.
+cruise	cruise_03	At cruising height now. The pilot might even have a moment to relax.
+cruise	cruise_04	The plane hums along. Below, the clouds drift by.
+cruise	cruise_05	Steady as she goes. A lovely, level flight.
+cruise	cruise_06	The aircraft is flying beautifully. Wings working, engines purring.
+cruise	cruise_07	Cruising over the landscape. What a way to see the world.
+cruise	cruise_08	The plane holds its course. Not a wobble in sight.
+cruise	cruise_09	Up among the clouds now. A gentle, easy flight.
+cruise	cruise_10	The engines drone on. A comfortable flight for everyone aboard.
+cruise	cruise_11	Lovely flying weather. The plane glides along without a care.
+cruise	cruise_12	The aircraft cruises over the hills. Somewhere down there, someone is waving.
+cruise	cruise_13	A long, level flight. The pilot's doing a fine job.
+cruise	cruise_14	Flying on. The horizon stretches out ahead.
+cruise	cruise_15	The plane is cruising nicely. Any minute now, the pilot will try something fancy.
+cruise	cruise_16	Above the clouds, the sky is always blue. Our pilot knows that.
+cruise	cruise_17	Gentle flying. The kind of flight that makes you want to take up aviation.
+cruise	cruise_18	The aircraft rides the air like a bird. A very loud bird.
+cruise	cruise_19	Holding height, holding speed. Textbook stuff.
+cruise	cruise_20	There's nothing quite like flying level over Kerbin. Beautiful country.
+cruise	cruise_21	The plane cruises on, the engines steady, the wings sure.
+cruise	cruise_22	Plenty of fuel, plenty of sky. Lovely.
+cruise	cruise_23	The pilot has the controls, and the controls have the plane. Everything's in order.
+cruise	cruise_24	A smooth ride. I wish my journey to work were this pleasant.
+cruise	cruise_25	The plane drifts through the afternoon sky. Peaceful.
+cruise	cruise_26	Out over the sea now, the waves far below. Keep it steady.
+cruise	cruise_27	Cruising speed. The aircraft settles into its rhythm.
+cruise	cruise_28	The sky belongs to our pilot right now. Enjoy it.
+cruise	cruise_29	Wings level, nose steady. It's almost flying itself.
+cruise	cruise_30	A fine day for flying, and a fine plane to do it in.
