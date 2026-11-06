@@ -3,6 +3,10 @@
 A news channel in flight: a kerbal anchor at his desk talks over what your flight does, in about 1,500 lines in one voice,
 with a caption under each and his mouth moving with his voice.
 
+![He comes on air: Alt-N, the static, the newsroom in a corner of the screen, his opening line under it; then the Kerbal X lifts off the pad](src/KerbalNews/img/kerbal-news-on-air.gif)
+
+![On the whole screen: the anchor at his desk, then the flight beside him as the rocket climbs, the boosters dropped, his lines on each; then back to the corner](src/KerbalNews/img/kerbal-news-whole-screen.gif)
+
 **Version 0.1.0, the first release.** All 1,504 of its lines are voiced (ElevenLabs, the voice Robert).
 
 For Kerbal Space Program 1.12.x. **Needs [Keystone](https://github.com/IshiakiZ/ksp-keystone)**, a separate download
