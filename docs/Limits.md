@@ -11,5 +11,9 @@
   the Keystone window folds it at once.
 * **A flight only.** The newsroom is not shown at the space centre or in the editors (after a recovery, only his voice and
   its caption).
-* **Systems:** made and tried on a Mac (OpenGL). Run on Windows 11 (Direct3D 11) through its development switches on
-  2026-10-20; the Alt-N key itself not pressed there. Linux never run.
+* **The first time his window comes up in a game,** the newsroom is made behind the static, a piece a frame, and the static
+  is held until it is all there. On OpenGL its first drawing still holds one frame up some 80 ms, behind the static; on
+  Direct3D no frame of it reached 30 ms (Windows 11, 2026-11-03). Each later time it comes up at once.
+* **Systems:** made and tried on a Mac (OpenGL). On Windows 11, on Direct3D 11 and on OpenGL, Alt-N pressed in the game on
+  2026-11-03 (up, his sign-off, pressed twice at once), his lines and their captions, the whole screen with the flight beside
+  him, the close-up and the line after a recovery, each filmed every frame. Linux never run.

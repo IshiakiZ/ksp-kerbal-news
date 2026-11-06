@@ -32,7 +32,9 @@ namespace KerbalNews
 
         void Start()
         {
-            voice = gameObject.AddComponent<AudioSource>();
+            var speaker = new GameObject("KerbalNewsVoice");     // (found by name, as News's: Mission Music goes down under it)
+            speaker.transform.SetParent(transform, false);
+            voice = speaker.AddComponent<AudioSource>();
             voice.playOnAwake = false;
             voice.spatialBlend = 0f;
             voice.loop = false;

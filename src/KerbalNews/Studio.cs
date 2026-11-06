@@ -24,7 +24,9 @@ namespace KerbalNews
         public const int Layer = 22;
         public RenderTexture Picture { get; private set; }
         public string Said { get; private set; } = "not built";
-        public bool Built => root != null;
+        public bool Built => step >= Steps;
+        /// <summary>Whether the newsroom could not be made (Said says why); cleared by Destroy, for another try.</summary>
+        public bool Failed { get; private set; }
 
         GameObject root;
         Camera cam;
@@ -50,37 +52,87 @@ namespace KerbalNews
         // from the front, which hid his face; the second, turned round, showed the back of his head.)
         Vector3 Front => anchor != null ? anchor.forward : Vector3.forward;
 
-        public bool Build()
+        // ---- made a piece a frame while the static is up, the static held until it is all made (News): its two models' text read
+        // meanwhile on a worker thread, then the anchor, the set, and the lamps and the camera, a frame each. Made whole at the first
+        // press, in one frame, it held the game up 1.3 s on Windows (2026-11-03); without the suit's hidden pictures, still 0.36 s,
+        // the set 0.32 s of it, nearly all of that its lettering's first use of Unity's own font (now made ready as the channel comes
+        // on: News.ReadyLettering). Each piece's time goes in the game's log.
+        const int Steps = 4;
+        int step;
+        Model suitModel, micModel;
+        volatile bool modelsRead;
+        double readMs, micMs, wordsMs;
+        int collectionsWere;
+        readonly double[] took = new double[Steps];
+
+        /// <summary>The next piece of the newsroom made: true once it is all made; false while it is being made, and where it could not be (Failed).</summary>
+        public bool BuildStep()
         {
-            if (root != null) return true;
+            if (Built) return true;
+            if (Failed) return false;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             try
             {
-                // (far from where the flight's things are: nothing else is on its layer, but the game's terrain colliders and the
-                // like are, at the origin, and a newsroom inside them would do no harm and no good)
-                root = new GameObject("Kerbal News: newsroom");
-                UnityEngine.Object.DontDestroyOnLoad(root);
-                root.transform.position = new Vector3(0f, -4000f, 0f);
-                MakeAnchor();
-                MakeSet();
-                MakeLamps();
-                MakeCamera();
-                Camera.onPreCull += BeforeDrawing;
-                Camera.onPostRender += AfterDrawing;
-                KeepSunOff();
+                switch (step)
+                {
+                    case 0:
+                        collectionsWere = GC.CollectionCount(0);
+                        // (far from where the flight's things are: nothing else is on its layer, but the game's terrain colliders and the
+                        // like are, at the origin, and a newsroom inside them would do no harm and no good)
+                        root = new GameObject("Kerbal News: newsroom");
+                        UnityEngine.Object.DontDestroyOnLoad(root);
+                        root.transform.position = new Vector3(0f, -4000f, 0f);
+                        modelsRead = false;
+                        string suitPath = Lines.Folder + "Suit/suit.mesh", micPath = Lines.Folder + "Suit/microphone.mesh";
+                        System.Threading.ThreadPool.QueueUserWorkItem(_ =>
+                        {
+                            var reading = System.Diagnostics.Stopwatch.StartNew();
+                            suitModel = Model.Read(suitPath);
+                            micModel = Model.Read(micPath);
+                            readMs = reading.Elapsed.TotalMilliseconds;
+                            modelsRead = true;
+                        });
+                        break;
+                    case 1:
+                        if (!modelsRead) return false;
+                        foreach (Model m in new[] { suitModel, micModel }) if (m != null && m.Why != null) Debug.Log("[Kerbal News] a model could not be read: " + m.Why);
+                        MakeAnchor();
+                        break;
+                    case 2:
+                        MakeSet();
+                        break;
+                    case 3:
+                        MakeLamps();
+                        MakeCamera();
+                        Camera.onPreCull += BeforeDrawing;
+                        Camera.onPostRender += AfterDrawing;
+                        KeepSunOff();
+                        break;
+                }
+                took[step] = watch.Elapsed.TotalMilliseconds;
+                step++;
+                if (!Built) { Said = "being made (" + step + " of " + Steps + ")"; return false; }
                 Said = "built" + (anchor == null ? ", no anchor (the game's seated kerbal was not found)" : "") + (jaw == null ? ", no jaw found" : ", jaw " + jaw.name);
+                Debug.Log(string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                    "[Kerbal News] the newsroom made in {0} frames: begun in {9:F0} ms, its models read in {1:F0} ms on a worker thread; the anchor {2:F0} ms (his suit's pictures {3:F0}: {4}), the set {5:F0} (the microphone {6:F0}, the lettering {7:F0} in all), the lamps and the camera {8:F0}; {10} collections meanwhile",
+                    Steps, readMs, took[1], suitedMs, suitedSaid, took[2], micMs, wordsMs, took[3], took[0], GC.CollectionCount(0) - collectionsWere));
                 return true;
             }
             catch (Exception ex)
             {
-                Said = "could not be built: " + ex.Message;
                 Debug.LogError("[Kerbal News] the newsroom could not be built: " + ex);
                 Destroy();
+                Said = "could not be built: " + ex.Message;
+                Failed = true;
                 return false;
             }
         }
 
         public void Destroy()
         {
+            step = 0;
+            Failed = false;
+            micMs = wordsMs = 0.0;
             Camera.onPreCull -= BeforeDrawing;
             Camera.onPostRender -= AfterDrawing;
             if (Picture != null) { Picture.Release(); UnityEngine.Object.Destroy(Picture); Picture = null; }
@@ -113,6 +165,9 @@ namespace KerbalNews
             foreach (Collider c in made.GetComponentsInChildren<Collider>(true)) UnityEngine.Object.DestroyImmediate(c);
             foreach (Rigidbody r in made.GetComponentsInChildren<Rigidbody>(true)) UnityEngine.Object.DestroyImmediate(r);
             foreach (AudioSource a in made.GetComponentsInChildren<AudioSource>(true)) UnityEngine.Object.DestroyImmediate(a);
+            // (his portrait's camera has a lens flare's layer on it, and cannot be taken off while that is there: it was left on him,
+            // "Can't remove Camera because FlareLayer depends on it" in the log; the PC, 2026-11-03)
+            foreach (FlareLayer f in made.GetComponentsInChildren<FlareLayer>(true)) UnityEngine.Object.DestroyImmediate(f);
             foreach (Camera c in made.GetComponentsInChildren<Camera>(true)) UnityEngine.Object.DestroyImmediate(c);
             foreach (Light l in made.GetComponentsInChildren<Light>(true)) UnityEngine.Object.DestroyImmediate(l);
             // (the cockpit kerbal carries his helmet and visor, shown only when he wears them: a newsreader does not)
@@ -123,20 +178,37 @@ namespace KerbalNews
             }
             SetLayer(holder.transform);
             // (his suit dark, as a newsreader's: the suit's own picture made grey and coloured a dark navy, so that its seams and
-            // folds stay (multiplied down, the orange suit came out brown); his face and hands as they are)
+            // folds stay (multiplied down, the orange suit came out brown); his face and hands as they are. Only what is shown: not
+            // the helmet and visor, nor the body where the suit made for him is worn in its place; and each picture made once,
+            // however many of his materials share it. Made for those, none of them shown, they were most of the 1.3 s that the
+            // first press held the game up on Windows, 2026-11-03.)
+            bool suitWorn = suitModel != null && suitModel.Why == null;
+            var suited = new Dictionary<Texture, Texture2D>();
+            var suitedWatch = System.Diagnostics.Stopwatch.StartNew();
+            int left = 0, coloured = 0;
             foreach (Renderer r in made.GetComponentsInChildren<Renderer>(true))
             {
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                 r.receiveShadows = true;
+                if (!r.enabled || (suitWorn && r.name == "body01")) { left += r.sharedMaterials.Length; continue; }
                 foreach (Material m in r.materials)
                 {
                     string n = (m.name + " " + (m.mainTexture != null ? m.mainTexture.name : "")).ToLowerInvariant();
                     if (n.Contains("head") || n.Contains("eye") || n.Contains("teeth") || n.Contains("tongue") || n.Contains("hand")) continue;
-                    Texture2D suit = Suited(m.mainTexture);
-                    if (suit != null) { m.mainTexture = suit; made2.Add(suit); if (m.HasProperty("_Color")) m.color = Color.white; }
+                    coloured++;
+                    Texture2D suit = null;
+                    if (m.mainTexture != null && !suited.TryGetValue(m.mainTexture, out suit))
+                    {
+                        suit = Suited(m.mainTexture);
+                        suited[m.mainTexture] = suit;
+                        if (suit != null) made2.Add(suit);
+                    }
+                    if (suit != null) { m.mainTexture = suit; if (m.HasProperty("_Color")) m.color = Color.white; }
                     else if (m.HasProperty("_Color")) m.color = new Color(0.22f, 0.25f, 0.36f);
                 }
             }
+            suitedMs = suitedWatch.Elapsed.TotalMilliseconds;
+            suitedSaid = string.Format("{0} made for {1} materials, {2} not shown left", suited.Count, coloured, left);
             Dress(made);
             holder.SetActive(true);
             anchor = made.transform;
@@ -163,6 +235,8 @@ namespace KerbalNews
         }
 
         readonly List<Texture2D> made2 = new List<Texture2D>();     // (the suit's pictures made here, destroyed with the newsroom)
+        double suitedMs;                                             // (how long they took, and how many, for the game's log)
+        string suitedSaid = "none";
 
         // ---- his suit (2026-10-19; the owner: "can you actually make a suit model for him"): made in Blender from the game's own
         // kerbal body (tools/news/blender/make_suit.py, from News.Export's copy of it), so that it rides on the body's own bones with
@@ -183,10 +257,10 @@ namespace KerbalNews
         {
             SkinnedMeshRenderer body = null;
             foreach (SkinnedMeshRenderer r in made.GetComponentsInChildren<SkinnedMeshRenderer>(true)) if (r.name == "body01") body = r;
-            string path = Lines.Folder + "Suit/suit.mesh";
-            if (body == null || body.sharedMesh == null || !System.IO.File.Exists(path)) return;
-            Mesh m = ReadSuit(path, body.sharedMesh.bindposes, out List<string> materials);
+            if (body == null || body.sharedMesh == null) return;
+            Mesh m = MeshOf(suitModel, "Kerbal News: the anchor's suit", body.sharedMesh.bindposes);
             if (m == null) return;
+            List<string> materials = suitModel.Materials;
             madeMeshes.Add(m);
             var g = new GameObject("Kerbal News: the anchor's suit");
             g.layer = body.gameObject.layer;
@@ -223,10 +297,9 @@ namespace KerbalNews
 
         bool Microphone(Vector3 foot, Vector3 mouth, float h)
         {
-            string path = Lines.Folder + "Suit/microphone.mesh";
-            if (!System.IO.File.Exists(path)) return false;
-            Mesh m = ReadSuit(path, null, out List<string> materials);
+            Mesh m = MeshOf(micModel, "Kerbal News: the microphone", null);
             if (m == null) return false;
+            List<string> materials = micModel.Materials;
             madeMeshes.Add(m);
             var g = new GameObject("Kerbal News: microphone");
             g.transform.SetParent(root.transform, true);
@@ -260,49 +333,141 @@ namespace KerbalNews
             return true;
         }
 
-        /// <summary>The suit's mesh from its text (tools/news/blender/anchor_io.py's write), with the body's bind poses (none: a mesh that does not bend).</summary>
-        static Mesh ReadSuit(string path, Matrix4x4[] bindposes, out List<string> materials)
+        /// <summary>
+        /// A model's text (tools/news/blender/anchor_io.py's write) read into lists: plain data, read on a worker thread while the
+        /// static is up; Unity's mesh is made from it on the game's own (MeshOf).
+        /// </summary>
+        sealed class Model
         {
-            materials = new List<string>();
-            var inv = System.Globalization.CultureInfo.InvariantCulture;
-            var pos = new List<Vector3>(); var nor = new List<Vector3>(); var uv = new List<Vector2>(); var bw = new List<BoneWeight>();
-            var subs = new List<List<int>>();
-            List<int> sub = null;
-            try
+            public readonly List<Vector3> Pos = new List<Vector3>(), Nor = new List<Vector3>();
+            public readonly List<Vector2> Uv = new List<Vector2>();
+            public readonly List<BoneWeight> Weights = new List<BoneWeight>();
+            public readonly List<List<int>> Subs = new List<List<int>>();
+            public readonly List<string> Materials = new List<string>();
+            public string Why;                    // why it could not be read (then it is not used)
+
+            /// <summary>
+            /// The model in the file, or null where there is none. Read from the file's bytes as they lie, no text made of them: read
+            /// by lines and words (File.ReadAllLines, Split), the two files' sixteen thousand lines took 29 ms and made some 17.5 MB
+            /// of little strings for the collector; from the bytes, 9 ms and some 2 MB (Windows, 2026-11-03).
+            /// </summary>
+            public static Model Read(string path)
             {
-                foreach (string raw in System.IO.File.ReadAllLines(path))
+                if (!System.IO.File.Exists(path)) return null;
+                var m = new Model();
+                List<int> sub = null;
+                try
                 {
-                    string[] w = raw.Split(' ');
-                    if (w.Length == 0) continue;
-                    switch (w[0])
+                    byte[] b = System.IO.File.ReadAllBytes(path);
+                    int i = 0;
+                    while (i < b.Length)
                     {
-                        case "v":
+                        int start = i;
+                        while (i < b.Length && b[i] != ' ' && b[i] != '\n' && b[i] != '\r') i++;
+                        int len = i - start;
+                        if (len == 1 && b[start] == 'v')
+                        {
                             // v x y z n x y z t u v w i w i w i w i w
-                            pos.Add(new Vector3(float.Parse(w[1], inv), float.Parse(w[2], inv), float.Parse(w[3], inv)));
-                            nor.Add(new Vector3(float.Parse(w[5], inv), float.Parse(w[6], inv), float.Parse(w[7], inv)));
-                            uv.Add(new Vector2(float.Parse(w[9], inv), float.Parse(w[10], inv)));
-                            bw.Add(new BoneWeight
+                            float x = (float)Number(b, ref i), y = (float)Number(b, ref i), z = (float)Number(b, ref i);
+                            Skip(b, ref i);
+                            float nx = (float)Number(b, ref i), ny = (float)Number(b, ref i), nz = (float)Number(b, ref i);
+                            Skip(b, ref i);
+                            float u = (float)Number(b, ref i), v = (float)Number(b, ref i);
+                            Skip(b, ref i);
+                            m.Pos.Add(new Vector3(x, y, z));
+                            m.Nor.Add(new Vector3(nx, ny, nz));
+                            m.Uv.Add(new Vector2(u, v));
+                            m.Weights.Add(new BoneWeight
                             {
-                                boneIndex0 = int.Parse(w[12]), weight0 = float.Parse(w[13], inv), boneIndex1 = int.Parse(w[14]), weight1 = float.Parse(w[15], inv),
-                                boneIndex2 = int.Parse(w[16]), weight2 = float.Parse(w[17], inv), boneIndex3 = int.Parse(w[18]), weight3 = float.Parse(w[19], inv),
+                                boneIndex0 = (int)Number(b, ref i), weight0 = (float)Number(b, ref i), boneIndex1 = (int)Number(b, ref i), weight1 = (float)Number(b, ref i),
+                                boneIndex2 = (int)Number(b, ref i), weight2 = (float)Number(b, ref i), boneIndex3 = (int)Number(b, ref i), weight3 = (float)Number(b, ref i),
                             });
-                            break;
-                        case "submesh":
-                            sub = new List<int>(); subs.Add(sub); materials.Add(w.Length > 3 ? w[3] : "-");
-                            break;
-                        case "f":
-                            if (sub != null) { sub.Add(int.Parse(w[1])); sub.Add(int.Parse(w[2])); sub.Add(int.Parse(w[3])); }
-                            break;
+                        }
+                        else if (len == 1 && b[start] == 'f')
+                        {
+                            if (sub != null) { sub.Add((int)Number(b, ref i)); sub.Add((int)Number(b, ref i)); sub.Add((int)Number(b, ref i)); }
+                        }
+                        else if (Is(b, start, len, "vertices"))
+                        {
+                            int count = (int)Number(b, ref i);
+                            m.Pos.Capacity = m.Nor.Capacity = m.Uv.Capacity = m.Weights.Capacity = Math.Max(count, 0);
+                        }
+                        else if (Is(b, start, len, "submesh"))
+                        {
+                            // submesh index triangles material
+                            Skip(b, ref i);
+                            int triangles = (int)Number(b, ref i);
+                            while (i < b.Length && b[i] == ' ') i++;
+                            int from = i;
+                            while (i < b.Length && b[i] != ' ' && b[i] != '\n' && b[i] != '\r') i++;
+                            sub = new List<int>(Math.Max(triangles, 0) * 3);
+                            m.Subs.Add(sub);
+                            m.Materials.Add(i > from ? System.Text.Encoding.ASCII.GetString(b, from, i - from) : "-");
+                        }
+                        while (i < b.Length && b[i] != '\n') i++;
+                        i++;
                     }
                 }
+                catch (Exception e) { m.Why = System.IO.Path.GetFileName(path) + ": " + e.Message; }
+                return m;
             }
-            catch (Exception e) { Debug.Log("[Kerbal News] the suit could not be read: " + e.Message); return null; }
-            var m = new Mesh { name = "Kerbal News: the anchor's suit" };
-            if (pos.Count > 65000) m.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-            m.SetVertices(pos); m.SetNormals(nor); m.SetUVs(0, uv);
-            if (bindposes != null) { m.boneWeights = bw.ToArray(); m.bindposes = bindposes; }
-            m.subMeshCount = subs.Count;
-            for (int i = 0; i < subs.Count; i++) m.SetTriangles(subs[i], i);
+
+            static bool Is(byte[] b, int at, int len, string word)
+            {
+                if (len != word.Length) return false;
+                for (int k = 0; k < len; k++) if (b[at + k] != word[k]) return false;
+                return true;
+            }
+
+            /// <summary>Past the next word on the line (a word that is not a number: "n", "t", "w", a submesh's index).</summary>
+            static void Skip(byte[] b, ref int i)
+            {
+                while (i < b.Length && b[i] == ' ') i++;
+                while (i < b.Length && b[i] != ' ' && b[i] != '\n' && b[i] != '\r') i++;
+            }
+
+            /// <summary>The next number on the line, as Python writes one (-0.0563, 3.6e-12, 4), read from its bytes; 0 where there is none.</summary>
+            static double Number(byte[] b, ref int i)
+            {
+                while (i < b.Length && b[i] == ' ') i++;
+                bool minus = false;
+                if (i < b.Length && (b[i] == '-' || b[i] == '+')) { minus = b[i] == '-'; i++; }
+                // (up to eighteen digits kept from the first that is not 0, the rest only counted: a float holds some nine)
+                long digits = 0;
+                int scale = 0, kept = 0;
+                bool point = false;
+                for (; i < b.Length; i++)
+                {
+                    byte c = b[i];
+                    if (c == '.' && !point) { point = true; continue; }
+                    if (c < '0' || c > '9') break;
+                    if (kept < 18) { digits = digits * 10 + (c - '0'); if (digits > 0) kept++; if (point) scale--; }
+                    else if (!point) scale++;
+                }
+                if (i < b.Length && (b[i] == 'e' || b[i] == 'E'))
+                {
+                    i++;
+                    bool down = false;
+                    if (i < b.Length && (b[i] == '-' || b[i] == '+')) { down = b[i] == '-'; i++; }
+                    int e = 0;
+                    for (; i < b.Length && b[i] >= '0' && b[i] <= '9'; i++) e = e * 10 + (b[i] - '0');
+                    scale += down ? -e : e;
+                }
+                double value = scale == 0 ? digits : scale > 0 ? digits * Math.Pow(10.0, scale) : digits / Math.Pow(10.0, -scale);
+                return minus ? -value : value;
+            }
+        }
+
+        /// <summary>A model's mesh, with the body's bind poses (none: a mesh that does not bend); null where it could not be read.</summary>
+        static Mesh MeshOf(Model model, string name, Matrix4x4[] bindposes)
+        {
+            if (model == null || model.Why != null) return null;
+            var m = new Mesh { name = name };
+            if (model.Pos.Count > 65000) m.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+            m.SetVertices(model.Pos); m.SetNormals(model.Nor); m.SetUVs(0, model.Uv);
+            if (bindposes != null) { m.boneWeights = model.Weights.ToArray(); m.bindposes = bindposes; }
+            m.subMeshCount = model.Subs.Count;
+            for (int i = 0; i < model.Subs.Count; i++) m.SetTriangles(model.Subs[i], i);
             m.RecalculateBounds();
             return m;
         }
@@ -366,11 +531,13 @@ namespace KerbalNews
             // face it hid an eye, the third picture)
             Vector3 micFoot = c + front * (0.36f * h) + side * (0.24f * h) + Vector3.up * (deskTop - c.y);
             Vector3 micHead = micFoot + Vector3.up * (0.2f * h) - front * (0.1f * h) - side * (0.06f * h);
+            var micWatch = System.Diagnostics.Stopwatch.StartNew();
             if (!Microphone(micFoot, jaw != null ? jaw.position : c + Vector3.up * (0.3f * h), h))
             {
                 Rod("microphone's stand", micFoot, micHead, 0.01f * h, lit, new Color(0.08f, 0.08f, 0.08f));
                 Ball("microphone", micHead, 0.035f * h, lit, new Color(0.2f, 0.2f, 0.22f));
             }
+            micMs = micWatch.Elapsed.TotalMilliseconds;
             // behind him: the wall, deep blue, with the channel's name and a bright band
             Box("wall", c - front * (0.9f * h) + Vector3.up * (0.4f * h), new Vector3(6f * h, 4f * h, 0.05f * h), front, flat, new Color(0.04f, 0.09f, 0.2f));
             Box("band", c - front * (0.86f * h) + Vector3.up * (0.05f * h), new Vector3(6f * h, 0.06f * h, 0.02f * h), front, flat, new Color(0.85f, 0.6f, 0.1f));
@@ -418,6 +585,13 @@ namespace KerbalNews
         }
 
         void Words(string text, Vector3 at, float size, Vector3 front, Color colour)
+        {
+            var wordsWatch = System.Diagnostics.Stopwatch.StartNew();
+            try { Lettering(text, at, size, front, colour); }
+            finally { wordsMs += wordsWatch.Elapsed.TotalMilliseconds; }
+        }
+
+        void Lettering(string text, Vector3 at, float size, Vector3 front, Color colour)
         {
             var g = new GameObject("Kerbal News: " + text);
             g.transform.SetParent(root.transform, true);

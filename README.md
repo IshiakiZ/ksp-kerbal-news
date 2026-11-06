@@ -3,7 +3,7 @@
 A news channel in flight: a kerbal anchor at his desk talks over what your flight does, in about 1,500 lines in one voice,
 with a caption under each and his mouth moving with his voice.
 
-**Not released: the first version, being finished.** All 1,504 of its lines are voiced (ElevenLabs, the voice Robert).
+**Version 0.1.0, the first release.** All 1,504 of its lines are voiced (ElevenLabs, the voice Robert).
 
 For Kerbal Space Program 1.12.x. **Needs [Keystone](https://github.com/IshiakiZ/ksp-keystone)**, a separate download
 ([on SpaceDock](https://spacedock.info/mod/4665/Keystone)): this mod does not load without it.
@@ -27,12 +27,15 @@ Option-K on a Mac), under **Kerbal News**: that shows nothing by itself. Then in
 * **The whole screen:** the button at the window's top right puts him on the whole screen, with your flight shown beside
   him when something is happening; the craft still answers its keys. The button at the top right puts him back.
 * **In the Keystone window:** which corner his window is in and how big, how much he talks, his voice's loudness, captions.
+  With Keystone 0.11.0 (to come), four finer details in its Advanced view: how long the static lasts as he comes on, how long the box
+  takes to grow to the whole screen, how long a quiet spell lasts before he fills it, and the least time between his lines.
+  [All of them](docs/Settings.md).
 
 [What each setting does](docs/Settings.md); [the lines](docs/The-lines.md).
 
 ## Works on
 
-Mac (being tried) and Windows 11 (Direct3D 11, through its development switches); Linux never run.
+Mac (OpenGL) and Windows 11 (Direct3D 11 and OpenGL); Linux never run.
 
 **More:** [the long description](docs/The-long-description.md) (everything in full, and what was tried on
 each system) and the rest of the [wiki](docs/README.md).

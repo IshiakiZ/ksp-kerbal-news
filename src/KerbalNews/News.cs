@@ -46,6 +46,15 @@ namespace KerbalNews
         internal static Toggle On, Captions;
         internal static Choice Corner, Chatter;
         internal static Slider Size, Loudness;
+        // (the page's fine details, in its Advanced view: each as installed does what the mod did before it had them)
+        internal static Slider StaticFor, GrowFor, SpellAfter, LeastGap;
+        internal static float Of(Slider slider, float installed) => slider != null ? (float)slider : installed;
+
+        /// <summary>The settings added after Fine(true) are fine details: on the page only in Keystone's Advanced view, until Fine(false).
+        /// (Keystone 0.11.0 has the two views; an older one has neither call, and shows the fine details with the rest.)</summary>
+        static void Fine(bool fine) { try { if (fine) Advanced(mod); else Simple(mod); } catch (Exception) { } }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)] static void Advanced(Mod page) => page.Advanced();
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)] static void Simple(Mod page) => page.Simple();
 
         public static void Setup()
         {
@@ -54,7 +63,15 @@ namespace KerbalNews
             On = mod.Toggle("on", "News channel", false, "On: the channel is ready, nothing shown yet. Alt+N (Option+N on a Mac) brings the anchor's window up in its corner, with static first, and takes it down again; over the window, the button at its top right puts him on the whole screen.");
             Corner = mod.Choice("corner", "His box", 0, new[] { "bottom right", "bottom left", "top right", "top left" }, "Which corner of the screen the anchor's box is in.");
             Size = mod.Slider("size", "Box size", 0.28f, 0.15f, 0.5f, "", 2, "How wide his box is, as a share of the screen's width.");
+            Fine(true);
+            StaticFor = mod.Slider("static", "The static as he comes on", 0.7f, 0.2f, 3f, " s", 2, "How long his box shows a television's static before his picture clears.");
+            GrowFor = mod.Slider("grow", "Growing to the whole screen takes", 0.45f, 0.1f, 2f, " s", 2, "How long his box takes to grow to the whole screen, and to go back.");
+            Fine(false);
             Chatter = mod.Choice("chatter", "How much he talks", 1, new[] { "only the big moments", "normal", "chatty" }, "Only the big moments: lift-off, orbit, a landing, a crash and the like. Chatty: more, and sooner after the last line.");
+            Fine(true);
+            SpellAfter = mod.Slider("spell", "A quiet spell filled after", 90f, 20f, 600f, " s", 0, "How long he lets the flight go by without a word before he fills the quiet with something of his own: a joke, a fact, the mail. Chatty: half of it.");
+            LeastGap = mod.Slider("gap", "The least time between his lines", 3f, 0.5f, 20f, " s", 1, "However much there is to say, no line of his begins sooner than this after the last. Chatty: half of it.");
+            Fine(false);
             Loudness = mod.Slider("loudness", "Voice", 0.9f, 0f, 1f, "", 2, "How loud the anchor is (the game's own voice volume applies as well).");
             Captions = mod.Toggle("captions", "Captions", true, "What he says, written at the bottom of the screen.");
         }
@@ -71,7 +88,10 @@ namespace KerbalNews
         float busyUntil, eventAt = -100f;  // the flight shown beside him until then; when something last happened in it
         float hover;                       // the pointer over the small window, its button shown (eased)
         bool hidUI, burning;               // the game's interface put away for the whole screen; an engine of the craft burning
-        const float StaticTime = 0.7f, ClearTime = 0.35f, FoldTime = 0.3f, GrowTime = 0.45f, AsideTime = 0.9f, BusyHold = 7f;
+        const float ClearTime = 0.35f, FoldTime = 0.3f, AsideTime = 0.9f, BusyHold = 7f;
+        // (0.7 s and 0.45 s as installed: the page's fine details may set others)
+        static float StaticTime => Of(StaticFor, 0.7f);
+        static float GrowTime => Of(GrowFor, 0.45f);
         Live live;
         Texture2D noise;
         Color32[] noiseDots;
@@ -104,7 +124,11 @@ namespace KerbalNews
             instance = this;
             Setup();
             studio = new Studio();
-            voice = gameObject.AddComponent<AudioSource>();
+            // (on an object of its own named so, that other mods can find: Mission Music lets its music down under it, as under the
+            // AI Bridge's voice; docs/sound-rules.md, M5)
+            var speaker = new GameObject("KerbalNewsVoice");
+            speaker.transform.SetParent(transform, false);
+            voice = speaker.AddComponent<AudioSource>();
             voice.playOnAwake = false;
             voice.spatialBlend = 0f;
             voice.loop = false;
@@ -289,7 +313,7 @@ namespace KerbalNews
             if (!lit && high) marks.Add("night");
             if (lit && marks.Remove("night") && high) Want("sunrise", false);
             // (a quiet spell: something to fill it, now and then, as fits the moment: see Spell)
-            float quiet = Chatter == 2 ? 45f : 90f;
+            float spell = Of(SpellAfter, 90f), quiet = Chatter == 2 ? spell * 0.5f : spell;
             if (Chatter > 0 && speaking == null && Time.time - lastSaid > quiet && waiting.Count == 0) Want(Spell(v, lit), false);
         }
 
@@ -346,12 +370,30 @@ namespace KerbalNews
 
         // ---------------------------------------------------------------- the channel
 
+        // (any frame of the channel's own work over 30 ms said in the game's log, with the collections so far: its first opening held
+        // the game up, 2026-11-03)
+        static readonly System.Diagnostics.Stopwatch ownWork = new System.Diagnostics.Stopwatch();
+
+        static void Slow(string what, EventType? type = null)
+        {
+            double ms = ownWork.Elapsed.TotalMilliseconds;
+            if (ms > 30.0) Debug.Log("[Kerbal News] " + what + (type != null ? " (" + type + ")" : "") + " took " + ms.ToString("F0", System.Globalization.CultureInfo.InvariantCulture) + " ms (frame " + Time.frameCount + ", " + GC.CollectionCount(0) + " collections so far)");
+        }
+
         void Update()
+        {
+            ownWork.Reset(); ownWork.Start();
+            Tick();
+            Slow("its work this frame");
+        }
+
+        void Tick()
         {
             // (the window's own clock: a recording made frame by frame steps it by its frames, as the game's clock is stepped, so
             // that a film of the static or the fold shows what the player sees; otherwise real time, paused or not)
             frameStep = Time.captureFramerate > 0 ? 1f / Time.captureFramerate : Mathf.Min(Time.unscaledDeltaTime, 0.1f);
             clock += frameStep;
+            if (On && !letteringReady) ReadyLettering();
             // (the page's switch lets the channel be; the hotkey alone brings its window up and takes it down, and only while the channel
             // is on. The window's state lasts through a scene's change in one session, never saved: a game starts with it down.)
             if (On && GameSettings.MODIFIER_KEY.GetKey() && Input.GetKeyDown(KeyCode.N)) Key();
@@ -362,6 +404,14 @@ namespace KerbalNews
             if (wanted && show == Show.Off) Open();
             else if (!wanted && show != Show.Off && offAt < 0f) { offAt = clock; RestoreUI(); }
             if (show == Show.Off) return;
+            // (the newsroom made a piece a frame while the static is up, and the static held until it is all made: made whole at the
+            // first press, it held the game up, 2026-11-03)
+            if (!studio.Built)
+            {
+                if (studio.BuildStep()) studio.Drawing = true;
+                else if (studio.Failed) { CouldNotBuild(); return; }
+                else if (clock - onAt > StaticTime - 0.05f) onAt = clock - (StaticTime - 0.05f);
+            }
             studio.KeepSunOff();
             float step = frameStep;
             whole = Mathf.MoveTowards(whole, show == Show.Whole ? 1f : 0f, step / GrowTime);
@@ -396,9 +446,18 @@ namespace KerbalNews
             signingOff = false;
         }
 
+        void CouldNotBuild()
+        {
+            ScreenMessages.PostScreenMessage("Kerbal News: the newsroom could not be built (" + studio.Said + ")", 6f);
+            windowWanted = false;
+            On.Value = false;
+            Close();
+        }
+
         void Open()
         {
-            if (!studio.Build()) { windowWanted = false; On.Value = false; ScreenMessages.PostScreenMessage("Kerbal News: the newsroom could not be built (" + studio.Said + ")", 6f); return; }
+            // (the newsroom is made under the static, in Update; one that could not be made is tried again)
+            if (studio.Failed) studio.Destroy();
             studio.Drawing = true;
             show = Show.Small;
             onAt = clock;
@@ -510,7 +569,7 @@ namespace KerbalNews
             Vessel v = FlightGlobals.ActiveVessel;
             if (v == null || v.situation != Vessel.Situations.PRELAUNCH) waiting.RemoveAll(w => w.Event == "pad" || w.Event == "runway");
             if (waiting.Count == 0) return;
-            float gap = Chatter == 2 ? 1.5f : 3f;
+            float least = Of(LeastGap, 3f), gap = Chatter == 2 ? least * 0.5f : least;
             if (Time.time - lastSaid < gap) return;
             Wanted next = waiting.Find(w => w.Big) ?? waiting[0];
             waiting.Remove(next);
@@ -594,6 +653,28 @@ namespace KerbalNews
         // ---------------------------------------------------------------- on the screen
 
         GUIStyle bannerStyle, smallStyle, captionStyle, tagStyle;
+        readonly GUIContent captionText = new GUIContent();
+
+        static bool letteringReady;
+
+        /// <summary>
+        /// The window's lettering made ready once a game, the first frame the channel is on (as the flight loads, where it is on
+        /// already): Unity's own font, which the window's words are drawn in, is read and its letters drawn the first time anything
+        /// is written in it, and at the first press, in the window's first frame, that held the game up 0.29 s (Windows, 2026-11-03).
+        /// </summary>
+        static void ReadyLettering()
+        {
+            if (letteringReady) return;
+            letteringReady = true;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            Font font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            if (font == null) return;
+            const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .,:;!?'\"-()·";
+            int h = Screen.height;
+            foreach (int size in new[] { Mathf.Max(14, h / 30), Mathf.Max(11, h / 55) }) font.RequestCharactersInTexture(letters, size, FontStyle.Bold);
+            font.RequestCharactersInTexture(letters, Mathf.Max(13, h / 42), FontStyle.Normal);
+            Debug.Log("[Kerbal News] the window's lettering made ready in " + watch.Elapsed.TotalMilliseconds.ToString("F0", System.Globalization.CultureInfo.InvariantCulture) + " ms");
+        }
 
         void Styles()
         {
@@ -625,7 +706,15 @@ namespace KerbalNews
 
         void OnGUI()
         {
-            if (show == Show.Off || studio == null || studio.Picture == null) return;
+            EventType type = Event.current.type;
+            ownWork.Reset(); ownWork.Start();
+            Draw();
+            Slow("its drawing", type);
+        }
+
+        void Draw()
+        {
+            if (show == Show.Off || studio == null) return;
             Event e = Event.current;
             Rect small = Box(), screen = new Rect(0f, 0f, Screen.width, Screen.height);
             float w = Mathf.SmoothStep(0f, 1f, whole);
@@ -650,7 +739,9 @@ namespace KerbalNews
             Rect r = Between(small, screen, w);
             if (offAt >= 0f) { Fold(r, Mathf.Clamp01((clock - offAt) / FoldTime)); return; }
             if (w < 1f) Fill(new Rect(r.x - 3f, r.y - 3f, r.width + 6f, r.height + 6f), new Color(0.85f, 0.6f, 0.1f, 1f - w));
-            GUI.DrawTexture(r, studio.Picture, ScaleMode.ScaleAndCrop, false);
+            // (black under the static while the newsroom is being made)
+            if (studio.Picture != null) GUI.DrawTexture(r, studio.Picture, ScaleMode.ScaleAndCrop, false);
+            else Fill(r, Color.black);
             if (since < StaticTime + ClearTime) Static(r, since);
             // (the craft's name as the game shows it: a stock craft's own is a localisation tag, "#autoLOC_501232" for the Kerbal X,
             // which the ticker showed as it was; the PC, 2026-10-20)
@@ -685,11 +776,37 @@ namespace KerbalNews
             {
                 float cw = Screen.width * 0.56f;
                 var cap = new Rect((Screen.width - cw) * 0.5f, Screen.height * (w > 0.5f ? 0.84f : 0.66f), cw, Screen.height * 0.08f);
+                if (w <= 0.5f) cap = Aside(cap, small);
+                // (two lines or more, where it was narrowed: the band as tall as its words)
+                captionText.text = speaking.Caption;
+                float need = captionStyle.CalcHeight(captionText, cap.width) + 8f;
+                if (need > cap.height) cap = new Rect(cap.x, cap.y - (need - cap.height) * 0.5f, cap.width, need);
                 Fill(cap, new Color(0f, 0f, 0f, 0.55f));
-                GUI.Label(cap, speaking.Caption, captionStyle);
+                GUI.Label(cap, captionText, captionStyle);
             }
             if (hover > 0f && w <= 0f) Button(grow, true, hover * (grow.Contains(e.mousePosition) ? 1f : 0.75f));
             if (w >= 1f) Button(shrink, false, shrink.Contains(e.mousePosition) ? 1f : 0.7f);
+        }
+
+        /// <summary>The caption's band kept off the small window: its near end cut back to clear the window (and the channel's name
+        /// under it), the band moved outward if that left it narrower than 0.3 of the screen. Centred on the screen as it was, it ran
+        /// 140 pixels into a window at the bottom right, over him (Windows, 1280 x 720, 2026-11-03).</summary>
+        static Rect Aside(Rect cap, Rect box)
+        {
+            float gap = 12f, under = Mathf.Max(18f, box.height * 0.13f) + 6f;
+            var keep = new Rect(box.x - 3f - gap, box.y - 3f - gap, box.width + 6f + gap * 2f, box.height + 6f + under + gap * 2f);
+            if (!cap.Overlaps(keep)) return cap;
+            float least = Screen.width * 0.3f, edge = Mathf.Max(Screen.width * 0.045f, 56f);
+            if (box.center.x > Screen.width * 0.5f)
+            {
+                float right = keep.x, left = Mathf.Max(edge, Mathf.Min(cap.x, right - least));
+                return new Rect(left, cap.y, Mathf.Max(0f, right - left), cap.height);
+            }
+            else
+            {
+                float left = keep.xMax, right = Mathf.Min(Screen.width - edge, Mathf.Max(cap.xMax, left + least));
+                return new Rect(left, cap.y, Mathf.Max(0f, right - left), cap.height);
+            }
         }
 
         /// <summary>The full-screen button: at the small window's top right, inside it.</summary>
@@ -786,7 +903,8 @@ namespace KerbalNews
             {
                 float k = 1f - Mathf.SmoothStep(0f, 1f, t / 0.6f), h = Mathf.Max(2f, r.height * k);
                 var s = new Rect(r.x, r.center.y - h * 0.5f, r.width, h);
-                GUI.DrawTexture(s, studio.Picture, ScaleMode.StretchToFill, false);
+                if (studio.Picture != null) GUI.DrawTexture(s, studio.Picture, ScaleMode.StretchToFill, false);
+                else Fill(s, Color.black);
                 Fill(s, new Color(1f, 1f, 1f, 0.85f * (1f - k)));
                 return;
             }

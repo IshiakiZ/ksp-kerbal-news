@@ -18,8 +18,7 @@ happening, he moves aside and your flight is shown beside him, live, as a newsca
 The craft still answers its keys meanwhile, and the camera the mouse; the game's own interface is put away until the
 button at the top right puts him back in his window.
 
-**Not released: the first version, being finished.** All 1,504 of its lines are voiced (ElevenLabs, the voice Robert). It is
-kept out of the owner's own game until they want it there.
+**Version 0.1.0, the first release (2026-11-05).** All 1,504 of its lines are voiced (ElevenLabs, the voice Robert).
 
 For Kerbal Space Program 1.12.x. Needs [Keystone](https://github.com/IshiakiZ/ksp-keystone), a separate download
 ([on SpaceDock](https://spacedock.info/mod/4665/Keystone)): this mod does not load without it.
@@ -39,4 +38,10 @@ For Kerbal Space Program 1.12.x. Needs [Keystone](https://github.com/IshiakiZ/ks
 * **Windows 11 (Direct3D 11), 2026-10-20, through its development switches:** switched on with nothing shown, its window with
   static and then the anchor, a line said, the whole screen with the flight beside him, back, down; the craft's name in its
   banner mended (a stock craft's showed as "#autoLOC_501232"). The Alt-N key itself not pressed there.
+* **Windows 11, 2026-11-03, Direct3D 11 and OpenGL, Alt-N pressed in the game, every frame filmed with its sound:** the window
+  up with static and his welcome, signed off and folded, folded at once when pressed twice; four lines heard with their
+  captions; the whole screen and back; the close-up with a joke, his mouth following his voice; a recovery from the pad, his
+  line on it heard at the space centre. The first press had held the game up 1.3 s on Direct3D (his suit's materials
+  recoloured, Unity's font made ready); now its longest frame is 28 ms (on OpenGL one frame of 82 ms, behind the static). The
+  captions kept beside his window, not over him. No flicker or jitter.
 * **Linux:** never run.
