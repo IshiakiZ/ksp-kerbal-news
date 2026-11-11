@@ -5,7 +5,7 @@ using UnityEngine;
 
 #if !DEV
 [assembly: KSPAssembly("KerbalNews", 0, 1)]
-[assembly: KSPAssemblyDependency("Keystone", 0, 4)]
+[assembly: KSPAssemblyDependency("Keystone", 0, 11)]
 #endif
 
 namespace KerbalNews
@@ -40,7 +40,7 @@ namespace KerbalNews
     [KSPAddon(KSPAddon.Startup.Flight, false)]
     public sealed class News : MonoBehaviour
     {
-        public const string Version = "0.1.0";
+        public const string Version = "0.2.0";
 
         static Mod mod;
         internal static Toggle On, Captions;
@@ -74,7 +74,11 @@ namespace KerbalNews
             Fine(false);
             Loudness = mod.Slider("loudness", "Voice", 0.9f, 0f, 1f, "", 2, "How loud the anchor is (the game's own voice volume applies as well).");
             Captions = mod.Toggle("captions", "Captions", true, "What he says, written at the bottom of the screen.");
+            try { Keys(mod); } catch (Exception) { }             // (for Keystone's page of every key; not with a Keystone older than 0.9.0)
         }
+
+        /// <summary>The channel's key (with the game's modifier key held), as Keystone lists it.</summary>
+        static void Keys(Mod page) => page.Uses(KeyCode.N, true, "the news window, in flight, once the channel is on");
 
         enum Show { Off, Small, Whole }
         Show show = Show.Off;
@@ -395,8 +399,14 @@ namespace KerbalNews
             clock += frameStep;
             if (On && !letteringReady) ReadyLettering();
             // (the page's switch lets the channel be; the hotkey alone brings its window up and takes it down, and only while the channel
-            // is on. The window's state lasts through a scene's change in one session, never saved: a game starts with it down.)
-            if (On && GameSettings.MODIFIER_KEY.GetKey() && Input.GetKeyDown(KeyCode.N)) Key();
+            // is on. The window's state lasts through a scene's change in one session, never saved: a game starts with it down. With
+            // the channel off, the key says so on the screen, and where it is switched on: "Alt+N doesn't pull up Kerbal News",
+            // the owner, 2026-11-06, the channel being off as installed.)
+            if (GameSettings.MODIFIER_KEY.GetKey() && Input.GetKeyDown(KeyCode.N) && GUIUtility.keyboardControl == 0)
+            {
+                if (On) Key();
+                else ScreenMessages.PostScreenMessage("Kerbal News: the channel is off. Switch it on in Keystone's window (its keystone button on the toolbar, or " + (Application.platform == RuntimePlatform.OSXPlayer ? "Option" : "Alt") + "+K): Kerbal News, News channel.", 5f);
+            }
             if (!On) windowWanted = false;
             bool wanted = On && windowWanted;
             // (put off, the picture folds away first; put on again meanwhile, it comes on anew once it has)
